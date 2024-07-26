@@ -1,0 +1,38 @@
+@import "../assets/variables/variables.scss";
+
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        padding: 10px 16px;
+        border: 1px solid $color-primary;
+        border-radius: 50%;
+        cursor: pointer;
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        text-align: center;
+        color: $color-dark-3xl;
+
+        &:first-child,
+        &:last-child {
+            padding: 10px 8px;
+        }
+
+        &:hover {
+            background-color: $color-primary-light !important;
+            border: 1px solid $color-primary-light;
+        }
+    }
+
+    .current-page {
+        background-color: $color-primary;
+    }
+
+    .pagination__item~.pagination__item {
+        margin-left: 20px;
+    }
+}

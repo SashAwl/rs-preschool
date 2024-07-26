@@ -1,0 +1,98 @@
+.our-friends-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f6f6f6;
+}
+
+.our-friends-cards .card-slider {
+  width: 100%;
+  margin: 60px 0;
+  padding: 0 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.our-friends-cards .card-slider__arrow {
+  padding: 15px 10px;
+  border-radius: 100px;
+  border: 2px solid #f1cdb3;
+  cursor: pointer;
+}
+
+.our-friends-cards .card-slider__arrow:hover {
+  background-color: #fddcc4;
+  border-color: #fddcc4;
+}
+
+.our-friends-cards .card-slider__arrow:active {
+  background-color: #f1cdb3;
+  border-color: #f1cdb3;
+}
+
+.our-friends-cards .card-box {
+  padding: 0 53px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 90px;
+  width: 100%;
+}
+
+.our-friends-cards .card-box--many-cards {
+  padding: 0;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 40px 30px;
+}
+
+.our-friends-cards .card-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 9px;
+  padding-bottom: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fafafa;
+}
+
+.our-friends-cards .card-item__image {
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.our-friends-cards .card-item__heading {
+  margin: 30px auto;
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: #545454;
+}
+/*# sourceMappingURL=our-pets-block-styles.css.map */

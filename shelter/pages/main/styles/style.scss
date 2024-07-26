@@ -1,9 +1,9 @@
 @import "../../../assets/variables/variables.scss";
 @import "../../../styles/common-styles.scss";
+@import "../../../styles/our-pets-block-styles.scss";
 
 
 .cozy-house {
-    padding-top: 30px;
     background-image: url(../../../assets/start-screen-gradient-background.jpg);
     background-size: cover;
 
@@ -11,7 +11,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 818px;
+        height: 790px;
 
         .content {
             width: 460px;
@@ -55,65 +55,6 @@
         font-size: 15px;
         line-height: 160%;
         color: $color-dark-l;
-    }
-}
-
-.our-friends-cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: $color-light-l;
-
-    .card-slider {
-        width: 100%;
-        margin: 60px 0;
-        padding: 0 30px;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        &__arrow {
-            padding: 15px 10px;
-            border-radius: 100px;
-            border: 2px solid $color-primary;
-            cursor: pointer;
-
-            &:hover {
-                background-color: $color-primary-light;
-                border-color: $color-primary-light;
-            }
-
-            &:active {
-                background-color: $color-primary;
-                border-color: $color-primary;
-            }
-        }
-    }
-
-    .card-box {
-        padding: 0 53px;
-        display: flex;
-        justify-content: space-between;
-        flex-grow: 1;
-    }
-
-    .card-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 30px;
-        background-color: $color-light-s;
-
-        &__heading {
-            margin: 30px auto;
-            font-family: $font-family;
-            font-weight: 400;
-            font-size: 20px;
-            letter-spacing: 0.06em;
-            text-align: center;
-            color: $color-dark-l;
-        }
     }
 }
 

@@ -1,6 +1,8 @@
 .container {
   max-width: 1280px;
   padding: 0 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0 auto;
 }
 
@@ -119,7 +121,7 @@
 }
 
 .header .menu__item:active {
-  border-bottom: 1px solid #f1cdb3;
+  border-bottom: 2px solid #f1cdb3;
 }
 
 .header .menu__item__link {
@@ -194,6 +196,7 @@
 }
 
 .our-friends-cards .card-box--many-cards {
+  padding: 0;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   gap: 40px 30px;
@@ -212,6 +215,8 @@
           align-items: center;
   border-radius: 9px;
   padding-bottom: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #fafafa;
 }
 
@@ -230,167 +235,44 @@
   color: #545454;
 }
 
-.cozy-house {
-  background-image: url(../../../assets/start-screen-gradient-background.jpg);
-  background-size: cover;
-}
-
-.cozy-house .main-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 790px;
-}
-
-.cozy-house .main-top .content {
-  width: 460px;
-}
-
-.cozy-house .main-top__heading {
-  width: 310px;
-  font-family: "Georgia", sans-serif;
-  font-weight: 400;
-  font-size: 44px;
-  line-height: 130%;
-  color: #fff;
-}
-
-.cozy-house .main-top__text {
-  margin: 42px 0;
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 160%;
-  color: #cdcdcd;
-}
-
-.cozy-house .main-top__image {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.about__content {
-  width: 430px;
-}
-
-.about__text {
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 160%;
-  color: #545454;
-}
-
-.your-help {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.your-help .icon-box {
-  margin-top: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.your-help__icon-item {
-  padding: 25px 65px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.donation {
+.pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #f6f6f6;
 }
 
-.donation__content {
-  width: 380px;
-  margin-left: 30px;
-}
-
-.donation__text {
-  font-family: "Georgia", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 110%;
-  letter-spacing: 0.06em;
-  color: #545454;
-}
-
-.donation__phone {
-  background-color: #f1cdb3;
-  padding: 13px;
-  border-radius: 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+.pagination__item {
+  padding: 10px 16px;
+  border: 1px solid #f1cdb3;
+  border-radius: 50%;
+  cursor: pointer;
   font-family: "Georgia", sans-serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 115%;
   letter-spacing: 0.06em;
-  color: #545454;
+  text-align: center;
+  color: #292929;
 }
 
-.donation__phone::before {
-  content: "";
-  background-image: url(../../../assets/icons/credit-card.svg);
-  background-size: cover;
-  height: 23px;
-  width: 30px;
-  margin-right: 15px;
-  display: inline-block;
-  vertical-align: middle;
+.pagination__item:first-child, .pagination__item:last-child {
+  padding: 10px 8px;
 }
 
-.donation__subscription {
-  font-family: "Arial", sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 150%;
-  color: #b2b2b2;
+.pagination__item:hover {
+  background-color: #fddcc4 !important;
+  border: 1px solid #fddcc4;
+}
+
+.pagination .current-page {
+  background-color: #f1cdb3;
+}
+
+.pagination .pagination__item ~ .pagination__item {
+  margin-left: 20px;
 }
 
 .footer {

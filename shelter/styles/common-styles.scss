@@ -3,6 +3,7 @@
 .container {
     max-width: 1280px;
     padding: 0 40px;
+    box-sizing: border-box;
     margin: 0 auto;
 }
 
@@ -30,6 +31,10 @@
 
     &--color-light {
         color: $color-light-xl;
+    }
+
+    &--color-dark {
+        color: $color-dark-l;
     }
 
     &--width {
@@ -77,6 +82,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 30px 0;
 
     .logo {
         &__text {
@@ -86,6 +92,10 @@
             font-size: 13px;
             letter-spacing: 0.1em;
             color: $color-light-xl;
+        }
+
+        .text--color-dark {
+            color: $color-dark-l;
         }
     }
 
@@ -107,12 +117,16 @@
             }
 
             &:active {
-                border-bottom: 1px solid $color-primary;
+                border-bottom: 2px solid $color-primary;
             }
 
-            a {
+            &__link {
                 text-decoration: none;
                 color: $color-light-s;
+            }
+
+            .link--color-dark {
+                color: $color-dark-l;
             }
         }
 
