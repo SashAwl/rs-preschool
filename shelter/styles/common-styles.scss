@@ -1,0 +1,123 @@
+@import "../assets/variables/variables.scss";
+
+.container {
+    max-width: 1280px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.padding-each-block {
+    padding: 50px 0 100px;
+}
+
+.heading {
+    &-mini {
+        margin-bottom: 0;
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        color: $color-dark-l;
+    }
+
+    &--logo {
+        margin: 10px 0;
+        font-size: 32px;
+        line-height: 110%;
+        color: $color-primary;
+    }
+
+    &--color-light {
+        color: $color-light-xl;
+    }
+
+    &--width {
+        width: 400px;
+    }
+
+    &--width-donation {
+        width: 300px;
+    }
+
+    &--width-footer {
+        width: 280px;
+    }
+
+    &--align {
+        text-align: center;
+    }
+}
+
+.button {
+    border-radius: 100px;
+    border: none;
+    padding: 15px 45px;
+    background: $color-primary;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: $color-dark-3xl;
+    cursor: pointer;
+
+    &--color-light {
+        background-color: $color-light-s;
+        border: 1px solid $color-primary;
+    }
+
+    &:hover {
+        background-color: $color-primary-light;
+        border-color: $color-primary-light;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        &__text {
+            margin-top: 10px;
+            font-family: $second-family;
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            color: $color-light-xl;
+        }
+    }
+
+    .menu {
+        &__list {
+            display: flex;
+            margin-left: 0;
+            list-style-type: none;
+        }
+
+        &__item {
+            font-family: $second-family;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 160%;
+
+            &:hover {
+                font-weight: 500;
+            }
+
+            &:active {
+                border-bottom: 1px solid $color-primary;
+            }
+
+            a {
+                text-decoration: none;
+                color: $color-light-s;
+            }
+        }
+
+        .menu__item~.menu__item {
+            margin-left: 35px;
+        }
+    }
+}
