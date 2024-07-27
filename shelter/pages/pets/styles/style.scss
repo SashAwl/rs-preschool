@@ -1,0 +1,90 @@
+@import "../../../assets/variables/variables.scss";
+@import "../../../styles/common-styles.scss";
+@import "../../../styles/our-pets-block-styles.scss";
+@import "../../../styles/pagination-styles.scss";
+
+.footer {
+    height: 350px;
+    padding-top: 26px;
+    box-sizing: border-box;
+    background-image: url(../../../assets/start-screen-gradient-background.jpg);
+    background-size: cover;
+
+    &__box {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list {
+        margin-top: 40px;
+        padding-left: 0;
+        height: 104px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+
+    &__list-item {
+        width: 302px;
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        color: $color-primary;
+    }
+
+    .list-item {
+        &--email::before {
+            content: "";
+            width: 40px;
+            height: 26px;
+            margin-right: 20px;
+            background-image: url(../../../assets/icons/mail.svg);
+            background-size: cover;
+            display: inline-block;
+            float: inline-start;
+        }
+
+        &--phone::before {
+            content: "";
+            width: 40px;
+            height: 32px;
+            margin-right: 20px;
+            background-image: url(../../../assets/icons/phone.svg);
+            background-size: cover;
+            display: inline-block;
+            float: inline-start;
+        }
+
+        &--address-big::before {
+            content: "";
+            width: 22px;
+            height: 32px;
+            margin-right: 20px;
+            background-image: url(../../../assets/icons/pin.svg);
+            background-size: cover;
+            display: inline-block;
+            float: inline-start;
+            position: relative;
+            top: 5%;
+        }
+
+        &--address::before {
+            content: "";
+            width: 22px;
+            height: 32px;
+            margin-right: 20px;
+            background-image: url(../../../assets/icons/pin.svg);
+            background-size: cover;
+            display: inline-block;
+            float: inline-start;
+        }
+    }
+
+    &__img {
+        align-self: flex-end;
+    }
+}

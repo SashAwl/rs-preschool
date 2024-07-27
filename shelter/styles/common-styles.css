@@ -1,0 +1,155 @@
+.container {
+  max-width: 1280px;
+  padding: 0 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.padding-each-block {
+  padding: 50px 0 100px;
+}
+
+.heading-mini {
+  margin-bottom: 0;
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.heading--logo {
+  margin: 10px 0;
+  font-size: 32px;
+  line-height: 110%;
+  color: #f1cdb3;
+}
+
+.heading__link {
+  text-decoration: none;
+  color: #f1cdb3;
+}
+
+.heading--color-light {
+  color: #fff;
+}
+
+.heading--color-dark {
+  color: #545454;
+}
+
+.heading--width {
+  width: 400px;
+}
+
+.heading--width-donation {
+  width: 300px;
+}
+
+.heading--width-footer {
+  width: 280px;
+}
+
+.heading--align {
+  text-align: center;
+}
+
+.button {
+  border-radius: 100px;
+  border: none;
+  padding: 15px 45px;
+  background: #f1cdb3;
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+  cursor: pointer;
+}
+
+.button__link {
+  text-decoration: none;
+  color: #292929;
+}
+
+.button--color-light {
+  background-color: #fafafa;
+  border: 1px solid #f1cdb3;
+}
+
+.button:hover {
+  background-color: #fddcc4;
+  border-color: #fddcc4;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+}
+
+.header .logo__text {
+  margin-top: 10px;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+.header .logo .text--color-dark {
+  color: #545454;
+}
+
+.header .menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0;
+  list-style-type: none;
+}
+
+.header .menu__item {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+}
+
+.header .menu__item:hover {
+  font-weight: 500;
+}
+
+.header .menu__item:active {
+  border-bottom: 2px solid #f1cdb3;
+}
+
+.header .menu__item__link {
+  text-decoration: none;
+  color: #fafafa;
+}
+
+.header .menu__item .link--color-dark {
+  color: #545454;
+}
+
+.header .menu .menu__item ~ .menu__item {
+  margin-left: 35px;
+}
+
+.header .menu .current-page {
+  pointer-events: none;
+  cursor: default;
+  border-bottom: 2px solid #f1cdb3;
+}
+/*# sourceMappingURL=common-styles.css.map */

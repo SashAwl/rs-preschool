@@ -1,0 +1,224 @@
+@import "../../../assets/variables/variables.scss";
+@import "../../../styles/common-styles.scss";
+@import "../../../styles/our-pets-block-styles.scss";
+
+
+.cozy-house {
+    background-image: url(../../../assets/start-screen-gradient-background.jpg);
+    background-size: cover;
+
+    .main-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 790px;
+
+        .content {
+            width: 460px;
+        }
+
+        &__heading {
+            width: 310px;
+            font-family: $font-family;
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 130%;
+            color: $color-light-xl;
+        }
+
+        &__text {
+            margin: 42px 0;
+            font-family: $second-family;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 160%;
+            color: $color-dark-s;
+        }
+
+        &__image {
+            align-self: flex-end;
+        }
+    }
+}
+
+.about {
+    display: flex;
+    justify-content: space-around;
+
+    &__content {
+        width: 430px;
+    }
+
+    &__text {
+        font-family: $second-family;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 160%;
+        color: $color-dark-l;
+    }
+}
+
+.your-help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .icon-box {
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    &__icon-item {
+        padding: 25px 65px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.donation {
+    display: flex;
+    justify-content: center;
+    background-color: $color-light-l;
+
+    &__content {
+        width: 380px;
+        margin-left: 30px;
+    }
+
+    &__text {
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 110%;
+        letter-spacing: 0.06em;
+        color: $color-dark-l;
+    }
+
+    &__phone {
+        background-color: $color-primary;
+        padding: 13px;
+        border-radius: 10px;
+        width: fit-content;
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        color: $color-dark-l;
+
+        &::before {
+            content: "";
+            background-image: url(../../../assets/icons/credit-card.svg);
+            background-size: cover;
+            height: 23px;
+            width: 30px;
+            margin-right: 15px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    &__subscription {
+        font-family: $second-family;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: $color-dark-m;
+    }
+}
+
+
+.footer {
+    height: 350px;
+    padding-top: 26px;
+    box-sizing: border-box;
+    background-image: url(../../../assets/start-screen-gradient-background.jpg);
+    background-size: cover;
+
+    &__box {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list {
+        margin-top: 40px;
+        padding-left: 0;
+        height: 104px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+
+    &__list-item {
+        width: 302px;
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        color: $color-primary;
+    }
+
+    .list-item {
+        &__link {
+            text-decoration: none;
+            color: $color-primary;
+        }
+
+        &--email::before {
+            content: "";
+            width: 40px;
+            height: 26px;
+            margin-right: 20px;
+            background-image: url(../../../assets/icons/mail.svg);
+            background-size: cover;
+            display: inline-block;
+            float: inline-start;
+        }
+
+        &--phone::before {
+            content: "";
+            width: 40px;
+            height: 32px;
+            margin-right: 20px;
+            background-image: url(../../../assets/icons/phone.svg);
+            background-size: cover;
+            display: inline-block;
+            float: inline-start;
+        }
+
+        &--address-big::before {
+            content: "";
+            width: 22px;
+            height: 32px;
+            margin-right: 20px;
+            background-image: url(../../../assets/icons/pin.svg);
+            background-size: cover;
+            display: inline-block;
+            float: inline-start;
+            position: relative;
+            top: 5%;
+        }
+
+        &--address::before {
+            content: "";
+            width: 22px;
+            height: 32px;
+            margin-right: 20px;
+            background-image: url(../../../assets/icons/pin.svg);
+            background-size: cover;
+            display: inline-block;
+            float: inline-start;
+        }
+    }
+
+    &__img {
+        align-self: flex-end;
+    }
+}
