@@ -4,40 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="pages/main/styles/style.css">
     <title>Shelter</title>
 </head>
 
 <body>
     <div class="cozy-house">
-        <header class="header container">
-            <div class="logo">
-                <h2 class="heading-mini heading--logo">Cozy House</h2>
-                <p class="logo__text">Shelter for pets in Boston</p>
+        <div class="container">
+            <header class="header">
+                <div class="logo">
+                    <h2 class="heading-mini heading--logo"><a class="heading__link" href="#">Cozy House</a></h2>
+                    <p class="logo__text">Shelter for pets in Boston</p>
+                </div>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item current-page"><a class="menu__item__link" href="./index.html">About
+                                the
+                                shelter</a>
+                        </li>
+                        <li class="menu__item"><a class="menu__item__link" href="./pages/pets/index.html">Our pets</a>
+                        </li>
+                        <li class="menu__item"><a class="menu__item__link" href="#help">Help the shelter</a></li>
+                        <li class="menu__item"><a class="menu__item__link" href="#contacts">Contacts</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="main-top">
+                <div class="content">
+                    <h1 class="main-top__heading">Not only people need a house</h1>
+                    <p class="main-top__text">We offer to give a chance to a little and nice puppy with an extremely
+                        wide
+                        and open heart. He or she will love you more than anybody else in the world, you will see!</p>
+                    <button class="button"><a class="button__link" href="./pages/pets/index.html">Make a
+                            friend</a></button>
+                </div>
+                <img class="main-top__image" src="./assets/image/start-screen-puppy.png" alt="dog-photo">
             </div>
-            <nav class="menu">
-                <ul class="menu__list">
-                    <li class="menu__item"><a class="menu__item__link" href="#">About the shelter</a></li>
-                    <li class="menu__item"><a class="menu__item__link" href="#">Our pets</a></li>
-                    <li class="menu__item"><a class="menu__item__link" href="#">Help the shelter</a></li>
-                    <li class="menu__item"><a class="menu__item__link" href="#">Contacts</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="main-top container">
-            <div class="content">
-                <h1 class="main-top__heading">Not only people need a house</h1>
-                <p class="main-top__text">We offer to give a chance to a little and nice puppy with an extremely wide
-                    and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-                <button class="button">Make a friend</button>
-            </div>
-            <img class="main-top__image" src="../../assets/image/start-screen-puppy.png" alt="dog-photo">
         </div>
     </div>
 
-    <main class="container">
-        <div class="about padding-each-block">
-            <img src="../../assets/image/about-pets.jpg" alt="pet-photo">
+    <main>
+        <div class="about padding-each-block container">
+            <img src="./assets/image/about-pets.jpg" alt="pet-photo">
             <div class="about__content">
                 <h2 class="heading-mini heading--width">About the shelter &ldquo;Cozy House&rdquo;</h2>
                 <p class="about__text">Currently have 121 dogs and 342 cats on our hands and statistics show that
@@ -52,24 +60,24 @@
 
         <div class="our-friends-cards padding-each-block">
             <h2 class="heading-mini heading--width heading--align">Our friends who <br>are looking for a house</h2>
-            <div class="card-slider">
+            <div class="card-slider container">
                 <svg class="card-slider__arrow" width="14" height="6" viewBox="0 0 14 6" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="#292929" />
                 </svg>
                 <div class="card-box">
                     <div class="card-item">
-                        <img class="card-item__image" src="../../assets/image/pets-katrine.jpg" alt="our-friend-photo">
+                        <img class="card-item__image" src="./assets/image/pets-katrine.jpg" alt="our-friend-photo">
                         <h3 class="card-item__heading">Katrine</h3>
                         <button class="button button--color-light">Learn more</button>
                     </div>
                     <div class="card-item">
-                        <img class="card-item__image" src="../../assets/image/pets-jennifer.jpg" alt="our-friend-photo">
+                        <img class="card-item__image" src="./assets/image/pets-jennifer.jpg" alt="our-friend-photo">
                         <h3 class="card-item__heading">Jennifer</h3>
                         <button class="button button--color-light">Learn more</button>
                     </div>
                     <div class="card-item">
-                        <img class="card-item__image" src="../../assets/image/pets-woody.jpg" alt="our-friend-photo">
+                        <img class="card-item__image" src="./assets/image/pets-woody.jpg" alt="our-friend-photo">
                         <h3 class="card-item__heading">Woody</h3>
                         <button class="button button--color-light">Learn more</button>
                     </div>
@@ -79,53 +87,54 @@
                     <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z" fill="#292929" />
                 </svg>
             </div>
-            <button class="button">Get to know the rest</button>
+            <button class="button"><a class="button__link" href="./pages/pets/index.html">Get to know the
+                    rest</a></button>
         </div>
 
-        <div class="your-help padding-each-block">
+        <div class="your-help padding-each-block container" id="help">
             <h2 class="heading-mini heading--align heading--width">How you can help our shelter</h2>
             <div class="icon-box">
                 <div class="your-help__icon-item">
-                    <img src="../../assets/icons/pet-food.svg" alt="food-icon">
+                    <img src="./assets/icons/pet-food.svg" alt="food-icon">
                     <h3 class="item__heading">Pet food</h3>
                 </div>
                 <div class="your-help__icon-item">
-                    <img src="../../assets/icons/transportation.svg" alt="transportation-icon">
+                    <img src="./assets/icons/transportation.svg" alt="transportation-icon">
                     <h3 class="item__heading">Transportation</h3>
                 </div>
                 <div class="your-help__icon-item">
-                    <img src="../../assets/icons/toys.svg" alt="toys-icon">
+                    <img src="./assets/icons/toys.svg" alt="toys-icon">
                     <h3 class="item__heading">Toys</h3>
                 </div>
                 <div class="your-help__icon-item">
-                    <img src="../../assets/icons/bowls-and-cups.svg" alt="bowls-and-cups-icon">
+                    <img src="./assets/icons/bowls-and-cups.svg" alt="bowls-and-cups-icon">
                     <h3 class="item__heading">Bowls and cups</h3>
                 </div>
                 <div class="your-help__icon-item">
-                    <img src="../../assets/icons/shampoos.svg" alt="shampoos-icon">
+                    <img src="./assets/icons/shampoos.svg" alt="shampoos-icon">
                     <h3 class="item__heading">Shampoos</h3>
                 </div>
                 <div class="your-help__icon-item">
-                    <img src="../../assets/icons/vitamins.svg" alt="vitamins-icon">
+                    <img src="./assets/icons/vitamins.svg" alt="vitamins-icon">
                     <h3 class="item__heading">Vitamins</h3>
                 </div>
                 <div class="your-help__icon-item">
-                    <img src="../../assets/icons/medicines.svg" alt="medicines-icon">
+                    <img src="./assets/icons/medicines.svg" alt="medicines-icon">
                     <h3 class="item__heading">Medicines</h3>
                 </div>
                 <div class="your-help__icon-item">
-                    <img src="../../assets/icons/collars-or-leashes.svg" alt="collars-or-leashes-icon">
+                    <img src="./assets/icons/collars-or-leashes.svg" alt="collars-or-leashes-icon">
                     <h3 class="item__heading">Collars / leashes</h3>
                 </div>
                 <div class="your-help__icon-item">
-                    <img src="../../assets/icons/sleeping-areas.svg" alt="sleeping-areas-icon">
+                    <img src="./assets/icons/sleeping-areas.svg" alt="sleeping-areas-icon">
                     <h3 class="item__heading">Sleeping areas</h3>
                 </div>
             </div>
         </div>
 
         <div class="donation padding-each-block">
-            <img src="../../assets/image/donation-dog.jpg" alt="dog-photo">
+            <img src="./assets/image/donation-dog.jpg" alt="dog-photo">
             <div class="donation__content">
                 <h2 class="heading-mini heading--width-donation">You can also make a donation</h2>
                 <p class="donation__text">Name of the bank / Type of bank account</p>
@@ -137,13 +146,14 @@
         </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="footer__box container">
             <div class="footer__section">
                 <h2 class="heading-mini heading--color-light heading--width-footer">For questions and suggestions</h2>
                 <ul class="footer__list">
                     <li class="footer__list-item list-item--email">email@shelter.com</li>
-                    <li class="footer__list-item list-item--phone">+13 674 567 75 54</li>
+                    <li class="footer__list-item list-item--phone"><a class="list-item__link" href="">+13 674 567 75
+                            54</a></li>
                 </ul>
             </div>
             <div class="footer__section">
@@ -155,7 +165,7 @@
                     <li class="footer__list-item list-item--address">18 South Park, London </li>
                 </ul>
             </div>
-            <img class="footer__img" src="../../assets/image/footer-puppy.jpg" alt="dog-photo">
+            <img class="footer__img" src="./assets/image/footer-puppy.jpg" alt="dog-photo">
         </div>
     </footer>
 </body>

@@ -27,6 +27,11 @@
   color: #f1cdb3;
 }
 
+.heading__link {
+  text-decoration: none;
+  color: #f1cdb3;
+}
+
 .heading--color-light {
   color: #fff;
 }
@@ -63,6 +68,11 @@
   letter-spacing: 0.06em;
   color: #292929;
   cursor: pointer;
+}
+
+.button__link {
+  text-decoration: none;
+  color: #292929;
 }
 
 .button--color-light {
@@ -135,5 +145,11 @@
 
 .header .menu .menu__item ~ .menu__item {
   margin-left: 35px;
+}
+
+.header .menu .current-page {
+  pointer-events: none;
+  cursor: default;
+  border-bottom: 2px solid #f1cdb3;
 }
 /*# sourceMappingURL=common-styles.css.map */

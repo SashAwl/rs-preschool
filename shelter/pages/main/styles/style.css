@@ -1,6 +1,8 @@
 .container {
   max-width: 1280px;
   padding: 0 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0 auto;
 }
 
@@ -22,6 +24,11 @@
   margin: 10px 0;
   font-size: 32px;
   line-height: 110%;
+  color: #f1cdb3;
+}
+
+.heading__link {
+  text-decoration: none;
   color: #f1cdb3;
 }
 
@@ -61,6 +68,11 @@
   letter-spacing: 0.06em;
   color: #292929;
   cursor: pointer;
+}
+
+.button__link {
+  text-decoration: none;
+  color: #292929;
 }
 
 .button--color-light {
@@ -119,7 +131,7 @@
 }
 
 .header .menu__item:active {
-  border-bottom: 1px solid #f1cdb3;
+  border-bottom: 2px solid #f1cdb3;
 }
 
 .header .menu__item__link {
@@ -133,6 +145,12 @@
 
 .header .menu .menu__item ~ .menu__item {
   margin-left: 35px;
+}
+
+.header .menu .current-page {
+  pointer-events: none;
+  cursor: default;
+  border-bottom: 2px solid #f1cdb3;
 }
 
 .our-friends-cards {
@@ -194,6 +212,7 @@
 }
 
 .our-friends-cards .card-box--many-cards {
+  padding: 0;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   gap: 40px 30px;
@@ -212,6 +231,8 @@
           align-items: center;
   border-radius: 9px;
   padding-bottom: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #fafafa;
 }
 
@@ -436,6 +457,11 @@
   font-size: 20px;
   line-height: 115%;
   letter-spacing: 0.06em;
+  color: #f1cdb3;
+}
+
+.footer .list-item__link {
+  text-decoration: none;
   color: #f1cdb3;
 }
 

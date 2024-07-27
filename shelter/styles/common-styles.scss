@@ -29,6 +29,11 @@
         color: $color-primary;
     }
 
+    &__link {
+        text-decoration: none;
+        color: $color-primary;
+    }
+
     &--color-light {
         color: $color-light-xl;
     }
@@ -66,6 +71,11 @@
     letter-spacing: 0.06em;
     color: $color-dark-3xl;
     cursor: pointer;
+
+    &__link {
+        text-decoration: none;
+        color: $color-dark-3xl;
+    }
 
     &--color-light {
         background-color: $color-light-s;
@@ -132,6 +142,12 @@
 
         .menu__item~.menu__item {
             margin-left: 35px;
+        }
+
+        .current-page {
+            pointer-events: none;
+            cursor: default;
+            border-bottom: 2px solid $color-primary;
         }
     }
 }
