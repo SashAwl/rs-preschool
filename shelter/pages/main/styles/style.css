@@ -274,12 +274,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 784px;
+  height: 787px;
 }
 
 .cozy-house .main-top .content {
   width: 460px;
-  margin-top: 189px;
+  margin-top: 192px;
 }
 
 .cozy-house .main-top__heading {
@@ -460,10 +460,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding-top: 30px;
+  gap: 137px;
 }
 
 .footer__list-contacts {
@@ -551,8 +552,5 @@ body {
 .footer__img {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  -webkit-box-flex: 0.47;
-      -ms-flex-positive: 0.47;
-          flex-grow: 0.47;
 }
 /*# sourceMappingURL=style.css.map */
