@@ -10,15 +10,12 @@
     background-image: url(../../../assets/start-screen-gradient-background.jpg);
     background-size: cover;
 
-    &__section~.footer__section {
-        margin-left: -21px;
-    }
-
     &__box {
         height: 100%;
         display: flex;
         justify-content: space-between;
         padding-top: 30px;
+        gap: 160px;
     }
 
     &__list-contacts {
