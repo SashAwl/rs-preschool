@@ -1,5 +1,10 @@
 @import "../assets/variables/variables.scss";
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     max-width: 1280px;
     padding: 0 40px;
@@ -8,12 +13,13 @@
 }
 
 .padding-each-block {
-    padding: 50px 0 100px;
+    padding: 80px 0 100px;
 }
 
 .heading {
     &-mini {
         margin-bottom: 0;
+        margin-top: 0;
         font-family: $font-family;
         font-weight: 400;
         font-size: 35px;
@@ -92,7 +98,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+    padding: 21px 0;
 
     .logo {
         &__text {
@@ -102,6 +108,7 @@
             font-size: 13px;
             letter-spacing: 0.1em;
             color: $color-light-xl;
+            padding-left: 3px;
         }
 
         .text--color-dark {
@@ -120,7 +127,7 @@
             font-family: $second-family;
             font-weight: 400;
             font-size: 15px;
-            line-height: 160%;
+            line-height: 155%;
 
             &:hover {
                 font-weight: 500;
@@ -141,7 +148,7 @@
         }
 
         .menu__item~.menu__item {
-            margin-left: 35px;
+            margin-left: 36px;
         }
 
         .current-page {

@@ -11,10 +11,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 790px;
+        height: 784px;
 
         .content {
             width: 460px;
+            margin-top: 189px;
         }
 
         &__heading {
@@ -43,13 +44,16 @@
 
 .about {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 120px;
 
     &__content {
         width: 430px;
+        margin-top: 12px;
     }
 
     &__text {
+        margin-top: 25px;
         font-family: $second-family;
         font-weight: 400;
         font-size: 15px;

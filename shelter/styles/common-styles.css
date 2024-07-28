@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   max-width: 1280px;
   padding: 0 40px;
@@ -7,11 +12,12 @@
 }
 
 .padding-each-block {
-  padding: 50px 0 100px;
+  padding: 80px 0 100px;
 }
 
 .heading-mini {
   margin-bottom: 0;
+  margin-top: 0;
   font-family: "Georgia", sans-serif;
   font-weight: 400;
   font-size: 35px;
@@ -95,7 +101,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 0;
+  padding: 21px 0;
 }
 
 .header .logo__text {
@@ -105,6 +111,7 @@
   font-size: 13px;
   letter-spacing: 0.1em;
   color: #fff;
+  padding-left: 3px;
 }
 
 .header .logo .text--color-dark {
@@ -123,7 +130,7 @@
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
-  line-height: 160%;
+  line-height: 155%;
 }
 
 .header .menu__item:hover {
@@ -144,7 +151,7 @@
 }
 
 .header .menu .menu__item ~ .menu__item {
-  margin-left: 35px;
+  margin-left: 36px;
 }
 
 .header .menu .current-page {

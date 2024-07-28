@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   max-width: 1280px;
   padding: 0 40px;
@@ -7,11 +12,12 @@
 }
 
 .padding-each-block {
-  padding: 50px 0 100px;
+  padding: 80px 0 100px;
 }
 
 .heading-mini {
   margin-bottom: 0;
+  margin-top: 0;
   font-family: "Georgia", sans-serif;
   font-weight: 400;
   font-size: 35px;
@@ -95,7 +101,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 0;
+  padding: 21px 0;
 }
 
 .header .logo__text {
@@ -105,6 +111,7 @@
   font-size: 13px;
   letter-spacing: 0.1em;
   color: #fff;
+  padding-left: 3px;
 }
 
 .header .logo .text--color-dark {
@@ -123,7 +130,7 @@
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
-  line-height: 160%;
+  line-height: 155%;
 }
 
 .header .menu__item:hover {
@@ -144,7 +151,7 @@
 }
 
 .header .menu .menu__item ~ .menu__item {
-  margin-left: 35px;
+  margin-left: 36px;
 }
 
 .header .menu .current-page {
@@ -169,8 +176,7 @@
 
 .our-friends-cards .card-slider {
   width: 100%;
-  margin: 60px 0;
-  padding: 0 30px;
+  margin: 58px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -185,7 +191,7 @@
 }
 
 .our-friends-cards .card-slider__arrow {
-  padding: 15px 10px;
+  padding: 21px 18px;
   border-radius: 100px;
   border: 2px solid #f1cdb3;
   cursor: pointer;
@@ -266,11 +272,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 790px;
+  height: 784px;
 }
 
 .cozy-house .main-top .content {
   width: 460px;
+  margin-top: 189px;
 }
 
 .cozy-house .main-top__heading {
@@ -300,15 +307,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 120px;
 }
 
 .about__content {
   width: 430px;
+  margin-top: 12px;
 }
 
 .about__text {
+  margin-top: 25px;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
