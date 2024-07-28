@@ -23,7 +23,7 @@ body {
         font-family: $font-family;
         font-weight: 400;
         font-size: 35px;
-        line-height: 130%;
+        line-height: 129%;
         letter-spacing: 0.06em;
         color: $color-dark-l;
     }
@@ -50,6 +50,10 @@ body {
 
     &--width {
         width: 400px;
+    }
+
+    &--width-help {
+        width: 380px;
     }
 
     &--width-donation {
@@ -121,6 +125,7 @@ body {
             display: flex;
             margin-left: 0;
             list-style-type: none;
+            padding-bottom: 8px;
         }
 
         &__item {

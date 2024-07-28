@@ -21,7 +21,7 @@ body {
   font-family: "Georgia", sans-serif;
   font-weight: 400;
   font-size: 35px;
-  line-height: 130%;
+  line-height: 129%;
   letter-spacing: 0.06em;
   color: #545454;
 }
@@ -48,6 +48,10 @@ body {
 
 .heading--width {
   width: 400px;
+}
+
+.heading--width-help {
+  width: 380px;
 }
 
 .heading--width-donation {
@@ -124,6 +128,7 @@ body {
   display: flex;
   margin-left: 0;
   list-style-type: none;
+  padding-bottom: 8px;
 }
 
 .header .menu__item {
