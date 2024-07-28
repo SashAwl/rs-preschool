@@ -164,8 +164,9 @@
     &__box {
         height: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         padding-top: 30px;
+        gap: 137px;
     }
 
     &__list-contacts {
