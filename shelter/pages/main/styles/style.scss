@@ -161,8 +161,8 @@
     background-image: url(../../../assets/start-screen-gradient-background.jpg);
     background-size: cover;
 
-    &__section {
-        width: 280px;
+    &__section~.footer__section {
+        margin-left: -21px;
     }
 
     &__box {
@@ -201,8 +201,7 @@
         }
 
         &--email {
-            margin-bottom: 30px;
-            ;
+            margin-bottom: 48px;
         }
 
         &--email::before {

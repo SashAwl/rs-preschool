@@ -8,7 +8,7 @@
 }
 
 .pagination__item {
-  padding: 10px 16px;
+  padding: 12px 20px;
   border: 1px solid #f1cdb3;
   border-radius: 50%;
   cursor: pointer;
@@ -22,7 +22,7 @@
 }
 
 .pagination__item:first-child, .pagination__item:last-child {
-  padding: 10px 8px;
+  padding: 20px 13px;
 }
 
 .pagination__item:hover {

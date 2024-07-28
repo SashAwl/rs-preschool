@@ -21,7 +21,7 @@ body {
   font-family: "Georgia", sans-serif;
   font-weight: 400;
   font-size: 35px;
-  line-height: 130%;
+  line-height: 129%;
   letter-spacing: 0.06em;
   color: #545454;
 }
@@ -48,6 +48,10 @@ body {
 
 .heading--width {
   width: 400px;
+}
+
+.heading--width-help {
+  width: 380px;
 }
 
 .heading--width-donation {
@@ -124,6 +128,7 @@ body {
   display: flex;
   margin-left: 0;
   list-style-type: none;
+  padding-bottom: 8px;
 }
 
 .header .menu__item {
@@ -306,6 +311,10 @@ body {
   background-size: cover;
 }
 
+.footer__section ~ .footer__section {
+  margin-left: -21px;
+}
+
 .footer__box {
   height: 100%;
   display: -webkit-box;
@@ -314,22 +323,18 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-top: 30px;
 }
 
-.footer__list {
-  margin-top: 40px;
+.footer__list-contacts {
+  margin-top: 44px;
   padding-left: 0;
-  height: 104px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  list-style-type: none;
+}
+
+.footer__list-address {
+  margin-top: 34px;
+  padding-left: 0;
   list-style-type: none;
 }
 
@@ -341,6 +346,15 @@ body {
   line-height: 115%;
   letter-spacing: 0.06em;
   color: #f1cdb3;
+}
+
+.footer .list-item__link {
+  text-decoration: none;
+  color: #f1cdb3;
+}
+
+.footer .list-item--email {
+  margin-bottom: 48px;
 }
 
 .footer .list-item--email::before {
@@ -358,11 +372,16 @@ body {
   content: "";
   width: 40px;
   height: 32px;
+  margin-bottom: 5px;
   margin-right: 20px;
   background-image: url(../../../assets/icons/phone.svg);
   background-size: cover;
   display: inline-block;
   float: inline-start;
+}
+
+.footer .list-item--address-big {
+  margin-bottom: 36px;
 }
 
 .footer .list-item--address-big::before {
