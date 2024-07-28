@@ -10,11 +10,11 @@
     .main-top {
         display: flex;
         justify-content: space-between;
-        height: 784px;
+        height: 787px;
 
         .content {
             width: 460px;
-            margin-top: 189px;
+            margin-top: 192px;
         }
 
         &__heading {
@@ -254,6 +254,5 @@
 
     &__img {
         align-self: flex-end;
-        flex-grow: 0.47;
     }
 }
