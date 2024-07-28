@@ -161,10 +161,6 @@
     background-image: url(../../../assets/start-screen-gradient-background.jpg);
     background-size: cover;
 
-    &__section~.footer__section {
-        margin-left: -21px;
-    }
-
     &__box {
         height: 100%;
         display: flex;
@@ -258,5 +254,6 @@
 
     &__img {
         align-self: flex-end;
+        flex-grow: 0.47;
     }
 }
