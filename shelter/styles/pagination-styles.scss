@@ -5,7 +5,7 @@
     justify-content: center;
 
     &__item {
-        padding: 10px 16px;
+        padding: 12px 20px;
         border: 1px solid $color-primary;
         border-radius: 50%;
         cursor: pointer;
@@ -19,7 +19,7 @@
 
         &:first-child,
         &:last-child {
-            padding: 10px 8px;
+            padding: 20px 13px;
         }
 
         &:hover {
