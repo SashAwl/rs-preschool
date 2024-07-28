@@ -320,7 +320,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 30px;
-  gap: 160px;
 }
 
 .footer__list-contacts {
@@ -408,5 +407,8 @@ body {
 .footer__img {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  -webkit-box-flex: 0.47;
+      -ms-flex-positive: 0.47;
+          flex-grow: 0.47;
 }
 /*# sourceMappingURL=style.css.map */
