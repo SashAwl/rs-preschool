@@ -10,7 +10,6 @@
     .main-top {
         display: flex;
         justify-content: space-between;
-        align-items: center;
         height: 784px;
 
         .content {
@@ -49,7 +48,7 @@
 
     &__content {
         width: 430px;
-        margin-top: 12px;
+        margin-top: 14px;
     }
 
     &__text {
@@ -68,7 +67,7 @@
     align-items: center;
 
     .icon-box {
-        margin-top: 60px;
+        margin-top: 35px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -79,6 +78,17 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .item__heading {
+        margin-bottom: 0;
+        font-family: $font-family;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+        text-align: center;
+        color: $color-dark-l;
     }
 }
 
@@ -92,7 +102,13 @@
         margin-left: 30px;
     }
 
+    &__image {
+        margin-top: 8px;
+        height: 261px;
+    }
+
     &__text {
+        margin-top: 21px;
         font-family: $font-family;
         font-weight: 400;
         font-size: 15px;
@@ -102,8 +118,9 @@
     }
 
     &__phone {
+        margin-top: 19px;
         background-color: $color-primary;
-        padding: 13px;
+        padding: 10px 15px;
         border-radius: 10px;
         width: fit-content;
         font-family: $font-family;
@@ -126,6 +143,7 @@
     }
 
     &__subscription {
+        margin-bottom: 0;
         font-family: $second-family;
         font-style: italic;
         font-weight: 400;
@@ -143,19 +161,26 @@
     background-image: url(../../../assets/start-screen-gradient-background.jpg);
     background-size: cover;
 
+    &__section {
+        width: 280px;
+    }
+
     &__box {
         height: 100%;
         display: flex;
         justify-content: space-between;
+        padding-top: 30px;
     }
 
-    &__list {
-        margin-top: 40px;
+    &__list-contacts {
+        margin-top: 44px;
         padding-left: 0;
-        height: 104px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        list-style-type: none;
+    }
+
+    &__list-address {
+        margin-top: 34px;
+        padding-left: 0;
         list-style-type: none;
     }
 
@@ -175,6 +200,11 @@
             color: $color-primary;
         }
 
+        &--email {
+            margin-bottom: 30px;
+            ;
+        }
+
         &--email::before {
             content: "";
             width: 40px;
@@ -190,11 +220,16 @@
             content: "";
             width: 40px;
             height: 32px;
+            margin-bottom: 5px;
             margin-right: 20px;
             background-image: url(../../../assets/icons/phone.svg);
             background-size: cover;
             display: inline-block;
             float: inline-start;
+        }
+
+        &--address-big {
+            margin-bottom: 36px;
         }
 
         &--address-big::before {
