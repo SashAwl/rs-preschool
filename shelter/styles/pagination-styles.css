@@ -22,12 +22,17 @@
 }
 
 .pagination__item:first-child, .pagination__item:last-child {
-  padding: 20px 13px;
+  padding: 14px 13px;
 }
 
 .pagination__item:hover {
   background-color: #fddcc4 !important;
   border: 1px solid #fddcc4;
+}
+
+.pagination .item--disabled {
+  cursor: default;
+  pointer-events: none;
 }
 
 .pagination .current-page-number {

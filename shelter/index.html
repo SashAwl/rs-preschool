@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pages/main/styles/style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <title>Shelter</title>
 </head>
 
@@ -13,14 +14,13 @@
         <div class="container">
             <header class="header">
                 <div class="logo">
-                    <h2 class="heading-mini heading--logo"><a class="heading__link" href="#">Cozy House</a></h2>
+                    <h1 class="heading-mini heading--logo"><a class="heading__link" href="#">Cozy House</a></h1>
                     <p class="logo__text">Shelter for pets in Boston</p>
                 </div>
                 <nav class="menu">
                     <ul class="menu__list">
-                        <li class="menu__item current-page"><a class="menu__item__link" href="./index.html">About
-                                the
-                                shelter</a>
+                        <li class="menu__item current-page">
+                            <a class="menu__item__link" href="./index.html">About the shelter</a>
                         </li>
                         <li class="menu__item"><a class="menu__item__link" href="./pages/pets/index.html">Our pets</a>
                         </li>
@@ -35,8 +35,8 @@
                     <p class="main-top__text">We offer to give a chance to a little and nice puppy with an extremely
                         wide
                         and open heart. He or she will love you more than anybody else in the world, you will see!</p>
-                    <button class="button"><a class="button__link" href="./pages/pets/index.html">Make a
-                            friend</a></button>
+                    <a class="button button--link" href="#our-friend">Make a
+                        friend</a>
                 </div>
                 <img class="main-top__image" src="./assets/image/start-screen-puppy.png" alt="dog-photo">
             </div>
@@ -58,7 +58,7 @@
             </div>
         </div>
 
-        <div class="our-friends-cards padding-each-block">
+        <div class="our-friends-cards padding-each-block" id="our-friend">
             <h2 class="heading-mini heading--width heading--align">Our friends who <br>are looking for a house</h2>
             <div class="card-slider container">
                 <svg class="card-slider__arrow" width="14" height="6" viewBox="0 0 14 6" fill="none"
@@ -87,8 +87,8 @@
                     <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z" fill="#292929" />
                 </svg>
             </div>
-            <button class="button"><a class="button__link" href="./pages/pets/index.html">Get to know the
-                    rest</a></button>
+            <a class="button button--link" href="./pages/pets/index.html">Get to know the
+                rest</a>
         </div>
 
         <div class="your-help padding-each-block container" id="help">
@@ -151,18 +151,30 @@
             <div class="footer__section">
                 <h2 class="heading-mini heading--color-light heading--width-footer">For questions and suggestions</h2>
                 <ul class="footer__list-contacts">
-                    <li class="footer__list-item list-item--email">email@shelter.com</li>
-                    <li class="footer__list-item list-item--phone"><a class="list-item__link" href="">+13 674 567 75
-                            54</a></li>
+                    <li class="footer__list-item list-item--email-indent">
+                        <a class="list-item__link list-item--email" href="mailto:mail@shelter.ru">
+                            email@shelter.com
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a class="list-item__link list-item--phone" href="tel:+136741111111">+13 674 567 75 54</a>
+                    </li>
                 </ul>
             </div>
             <div class="footer__section">
                 <h2 class="heading-mini heading--color-light heading--width-footer">We are waiting for your visit</h2>
                 <ul class="footer__list-address">
-                    <li class="footer__list-item list-item--address-big">1 Central Street, Boston (entrance from the
-                        store)
+                    <li class="footer__list-item list-item--address-big-indent">
+                        <a class="list-item__link list-item--address" target="_blank"
+                            href="https://www.google.ru/maps/d/u/0/viewer?mid=1MYMUtFSQWXoEI8IkBFUypCjsWME&hl=ru&ll=19.000113603109977%2C72.98965144512044&z=11">1
+                            Central Street, Boston (entrance from the
+                            store)</a>
                     </li>
-                    <li class="footer__list-item list-item--address">18 South Park, London </li>
+                    <li class="footer__list-item">
+                        <a class="list-item__link list-item--address" target="_blank"
+                            href="https://www.google.ru/maps/d/u/0/viewer?mid=1MYMUtFSQWXoEI8IkBFUypCjsWME&hl=ru&ll=19.000113603109977%2C72.98965144512044&z=11">18
+                            South Park, London</a>
+                    </li>
                 </ul>
             </div>
             <img class="footer__img" src="./assets/image/footer-puppy.jpg" alt="dog-photo">

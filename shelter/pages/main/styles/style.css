@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -31,6 +35,14 @@ body {
   font-size: 32px;
   line-height: 110%;
   color: #f1cdb3;
+  -webkit-transition: -webkit-transform 0.7s ease-in-out;
+  transition: -webkit-transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out;
+  transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
+}
+
+.heading--logo:hover {
+  scale: 1.02;
 }
 
 .heading__link {
@@ -80,7 +92,7 @@ body {
   cursor: pointer;
 }
 
-.button__link {
+.button--link {
   text-decoration: none;
   color: #292929;
 }
@@ -136,10 +148,14 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 155%;
+  -webkit-transition: -webkit-transform 1s easy;
+  transition: -webkit-transform 1s easy;
+  transition: transform 1s easy;
+  transition: transform 1s easy, -webkit-transform 1s easy;
 }
 
 .header .menu__item:hover {
-  font-weight: 500;
+  scale: 1.02;
 }
 
 .header .menu__item:active {
@@ -200,6 +216,8 @@ body {
   border-radius: 100px;
   border: 2px solid #f1cdb3;
   cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .our-friends-cards .card-slider__arrow:hover {
@@ -245,6 +263,11 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #fafafa;
+}
+
+.our-friends-cards .card-item:hover {
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .our-friends-cards .card-item__image {
@@ -494,7 +517,7 @@ body {
   color: #f1cdb3;
 }
 
-.footer .list-item--email {
+.footer .list-item--email-indent {
   margin-bottom: 48px;
 }
 
@@ -521,7 +544,7 @@ body {
   float: inline-start;
 }
 
-.footer .list-item--address-big {
+.footer .list-item--address-big-indent {
   margin-bottom: 36px;
 }
 

@@ -19,6 +19,7 @@
             border-radius: 100px;
             border: 2px solid $color-primary;
             cursor: pointer;
+            transition: all 0.4s ease;
 
             &:hover {
                 background-color: $color-primary-light;
@@ -54,6 +55,11 @@
         padding-bottom: 30px;
         box-sizing: border-box;
         background-color: $color-light-s;
+        transition: all 0.4s ease;
+
+        &:hover {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
 
         &__image {
             border-top-left-radius: 9px;
