@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -31,6 +35,14 @@ body {
   font-size: 32px;
   line-height: 110%;
   color: #f1cdb3;
+  -webkit-transition: -webkit-transform 0.7s ease;
+  transition: -webkit-transform 0.7s ease;
+  transition: transform 0.7s ease;
+  transition: transform 0.7s ease, -webkit-transform 0.7s ease;
+}
+
+.heading--logo:hover {
+  scale: 1.02;
 }
 
 .heading__link {
@@ -78,9 +90,11 @@ body {
   letter-spacing: 0.06em;
   color: #292929;
   cursor: pointer;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
-.button__link {
+.button--link {
   text-decoration: none;
   color: #292929;
 }
@@ -136,10 +150,14 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 155%;
+  -webkit-transition: -webkit-transform 1s easy;
+  transition: -webkit-transform 1s easy;
+  transition: transform 1s easy;
+  transition: transform 1s easy, -webkit-transform 1s easy;
 }
 
 .header .menu__item:hover {
-  font-weight: 500;
+  scale: 1.02;
 }
 
 .header .menu__item:active {

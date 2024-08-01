@@ -1,5 +1,9 @@
 @import "../assets/variables/variables.scss";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -33,6 +37,11 @@ body {
         font-size: 32px;
         line-height: 110%;
         color: $color-primary;
+        transition: transform 0.7s ease;
+
+        &:hover {
+            scale: 1.02;
+        }
     }
 
     &__link {
@@ -81,8 +90,9 @@ body {
     letter-spacing: 0.06em;
     color: $color-dark-3xl;
     cursor: pointer;
+    transition: all 1s ease;
 
-    &__link {
+    &--link {
         text-decoration: none;
         color: $color-dark-3xl;
     }
@@ -133,9 +143,10 @@ body {
             font-weight: 400;
             font-size: 15px;
             line-height: 155%;
+            transition: transform 1s easy;
 
             &:hover {
-                font-weight: 500;
+                scale: 1.02;
             }
 
             &:active {
