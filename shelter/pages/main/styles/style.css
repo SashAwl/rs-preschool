@@ -380,7 +380,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 68px 120px;
+  gap: 55px 120px;
 }
 
 .your-help__icon-item {
@@ -399,6 +399,15 @@ body {
 .your-help .item__icon {
   width: 60px;
   height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .your-help .item__heading {

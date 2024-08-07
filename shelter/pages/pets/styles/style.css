@@ -438,6 +438,8 @@ body {
 }
 
 .footer__img {
+  display: inline-block;
+  margin-left: 22px;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
