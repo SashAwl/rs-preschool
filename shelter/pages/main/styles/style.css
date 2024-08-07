@@ -35,10 +35,10 @@ body {
   font-size: 32px;
   line-height: 110%;
   color: #f1cdb3;
-  -webkit-transition: -webkit-transform 0.7s ease-in-out;
-  transition: -webkit-transform 0.7s ease-in-out;
-  transition: transform 0.7s ease-in-out;
-  transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
+  -webkit-transition: -webkit-transform 0.7s ease;
+  transition: -webkit-transform 0.7s ease;
+  transition: transform 0.7s ease;
+  transition: transform 0.7s ease, -webkit-transform 0.7s ease;
 }
 
 .heading--logo:hover {
@@ -90,6 +90,8 @@ body {
   letter-spacing: 0.06em;
   color: #292929;
   cursor: pointer;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .button--link {
@@ -263,6 +265,8 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #fafafa;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .our-friends-cards .card-item:hover {
@@ -315,7 +319,7 @@ body {
 }
 
 .cozy-house .main-top__text {
-  margin: 42px 0;
+  margin: 42px 0 56px;
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
@@ -366,19 +370,20 @@ body {
 }
 
 .your-help .icon-box {
-  margin-top: 35px;
+  margin-top: 61px;
+  padding: 0 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 68px 120px;
 }
 
 .your-help__icon-item {
-  padding: 25px 65px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,8 +396,14 @@ body {
           align-items: center;
 }
 
+.your-help .item__icon {
+  width: 60px;
+  height: 60px;
+}
+
 .your-help .item__heading {
   margin-bottom: 0;
+  margin-top: 30px;
   font-family: "Georgia", sans-serif;
   font-weight: 400;
   font-size: 20px;
@@ -418,7 +429,7 @@ body {
 }
 
 .donation__image {
-  margin-top: 8px;
+  margin-top: 11px;
   height: 261px;
 }
 
@@ -433,7 +444,7 @@ body {
 }
 
 .donation__phone {
-  margin-top: 19px;
+  margin-top: 18px;
   background-color: #f1cdb3;
   padding: 10px 15px;
   border-radius: 10px;
@@ -573,6 +584,8 @@ body {
 }
 
 .footer__img {
+  display: inline-block;
+  margin-left: 22px;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
