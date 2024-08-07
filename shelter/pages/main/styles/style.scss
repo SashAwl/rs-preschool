@@ -27,7 +27,7 @@
         }
 
         &__text {
-            margin: 42px 0;
+            margin: 42px 0 56px;
             font-family: $second-family;
             font-weight: 400;
             font-size: 15px;
@@ -67,10 +67,12 @@
     align-items: center;
 
     .icon-box {
-        margin-top: 35px;
+        margin-top: 61px;
+        padding: 0 60px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 68px 120px;
     }
 
     &__icon-item {
@@ -80,8 +82,14 @@
         align-items: center;
     }
 
+    .item__icon {
+        width: 60px;
+        height: 60px;
+    }
+
     .item__heading {
         margin-bottom: 0;
+        margin-top: 30px;
         font-family: $font-family;
         font-weight: 400;
         font-size: 20px;
@@ -103,7 +111,7 @@
     }
 
     &__image {
-        margin-top: 8px;
+        margin-top: 11px;
         height: 261px;
     }
 
@@ -118,7 +126,7 @@
     }
 
     &__phone {
-        margin-top: 19px;
+        margin-top: 18px;
         background-color: $color-primary;
         padding: 10px 15px;
         border-radius: 10px;
@@ -254,6 +262,8 @@
     }
 
     &__img {
+        display: inline-block;
+        margin-left: 22px;
         align-self: flex-end;
     }
 }

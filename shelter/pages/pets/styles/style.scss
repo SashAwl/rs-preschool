@@ -103,6 +103,8 @@
     }
 
     &__img {
+        display: inline-block;
+        margin-left: 22px;
         align-self: flex-end;
     }
 }
