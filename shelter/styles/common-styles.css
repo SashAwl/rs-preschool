@@ -23,11 +23,11 @@ body {
 
 .padding-each-block {
   padding-top: 81px;
-  padding-bottom: 100px;
+  padding-bottom: 99px;
 }
 
 @media only screen and (max-width: 1279px) {
-  .padding-each-block {
+  .padding--many-cards {
     padding-bottom: 75px;
   }
 }
