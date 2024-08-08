@@ -21,8 +21,12 @@ body {
 }
 
 .padding-each-block {
-    padding-top: 80px;
+    padding-top: 81px;
     padding-bottom: 100px;
+
+    @media only screen and (max-width:1279px) {
+        padding-bottom: 75px;
+    }
 }
 
 .heading {
@@ -292,11 +296,16 @@ body {
 
     @media only screen and (max-width:1279px) {
         height: 100%;
+        padding-top: 0;
 
         &__box {
             justify-content: center;
-            gap: 60px 65px;
+            gap: 52px 36px;
             flex-wrap: wrap;
+        }
+
+        &__img {
+            margin-left: 0;
         }
     }
 }
