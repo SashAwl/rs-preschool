@@ -15,8 +15,15 @@ body {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 1279px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
 .padding-each-block {
-  padding: 80px 0 100px;
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 .heading-mini {
@@ -79,6 +86,9 @@ body {
 }
 
 .button {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   border-radius: 100px;
   border: none;
   padding: 15px 45px;
@@ -107,6 +117,14 @@ body {
 .button:hover {
   background-color: #fddcc4;
   border-color: #fddcc4;
+}
+
+@media only screen and (max-width: 1279px) {
+  .button--align {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 .header {
@@ -141,6 +159,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-left: 0;
+  gap: 36px;
   list-style-type: none;
   padding-bottom: 8px;
 }
@@ -171,10 +190,6 @@ body {
 
 .header .menu__item .link--color-dark {
   color: #545454;
-}
-
-.header .menu .menu__item ~ .menu__item {
-  margin-left: 36px;
 }
 
 .header .menu .current-page {
@@ -293,6 +308,20 @@ body {
       align-self: flex-end;
 }
 
+@media only screen and (max-width: 1279px) {
+  .footer {
+    height: 100%;
+  }
+  .footer__box {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 60px 65px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .our-friends-cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -397,6 +426,26 @@ body {
   letter-spacing: 0.06em;
   text-align: center;
   color: #545454;
+}
+
+@media only screen and (max-width: 1279px) {
+  .our-friends-cards .card-box {
+    padding: 0 12px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .our-friends-cards .card-box--many-cards {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+  .our-friends-cards .card-box--many-cards .card-item:nth-child(7) {
+    display: none;
+  }
+  .our-friends-cards .card-item:last-child {
+    display: none;
+  }
 }
 
 .pagination {

@@ -77,3 +77,28 @@
         }
     }
 }
+
+@media only screen and (max-width: 1279px) {
+    .our-friends-cards {
+        .card-box {
+            padding: 0 12px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .card-box--many-cards {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px 30px;
+
+            .card-item:nth-child(7) {
+                display: none;
+            }
+        }
+
+        .card-item {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+}
