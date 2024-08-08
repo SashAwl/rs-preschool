@@ -103,4 +103,24 @@
   text-align: center;
   color: #545454;
 }
+
+@media only screen and (max-width: 1279px) {
+  .our-friends-cards .card-box {
+    padding: 0 12px;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .our-friends-cards .card-box--many-cards {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+  .our-friends-cards .card-box--many-cards .card-item:nth-child(7) {
+    display: none;
+  }
+  .our-friends-cards .card-item:last-child {
+    display: none;
+  }
+}
 /*# sourceMappingURL=our-pets-block-styles.css.map */
