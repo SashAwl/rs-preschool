@@ -102,9 +102,11 @@
         }
 
         .card-slider {
-            margin-top: 28px 0 39px;
-            padding-left: 94px;
-            padding-right: 94px;
+            &--many-cards {
+                margin: 28px 0 39px;
+                padding-left: 94px;
+                padding-right: 94px;
+            }
 
             .arrow--left {
                 margin-right: 12px;

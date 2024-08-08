@@ -23,11 +23,11 @@ body {
 
 .padding-each-block {
   padding-top: 81px;
-  padding-bottom: 100px;
+  padding-bottom: 99px;
 }
 
 @media only screen and (max-width: 1279px) {
-  .padding-each-block {
+  .padding--many-cards {
     padding-bottom: 75px;
   }
 }
@@ -459,8 +459,8 @@ body {
   .our-friends-cards .card-box--many-cards .card-item:nth-child(7) {
     display: none;
   }
-  .our-friends-cards .card-slider {
-    margin-top: 28px 0 39px;
+  .our-friends-cards .card-slider--many-cards {
+    margin: 28px 0 39px;
     padding-left: 94px;
     padding-right: 94px;
   }
