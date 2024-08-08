@@ -22,8 +22,14 @@ body {
 }
 
 .padding-each-block {
-  padding-top: 80px;
+  padding-top: 81px;
   padding-bottom: 100px;
+}
+
+@media only screen and (max-width: 1279px) {
+  .padding-each-block {
+    padding-bottom: 75px;
+  }
 }
 
 .heading-mini {
@@ -311,14 +317,18 @@ body {
 @media only screen and (max-width: 1279px) {
   .footer {
     height: 100%;
+    padding-top: 0;
   }
   .footer__box {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 60px 65px;
+    gap: 52px 36px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .footer__img {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=common-styles.css.map */

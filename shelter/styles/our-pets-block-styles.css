@@ -47,8 +47,15 @@
   border-color: #f1cdb3;
 }
 
+.our-friends-cards .card-slider .arrow--left {
+  margin-right: 53px;
+}
+
+.our-friends-cards .card-slider .arrow--right {
+  margin-left: 53px;
+}
+
 .our-friends-cards .card-box {
-  padding: 0 53px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -106,7 +113,6 @@
 
 @media only screen and (max-width: 1279px) {
   .our-friends-cards .card-box {
-    padding: 0 12px;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     gap: 40px;
@@ -114,10 +120,21 @@
   .our-friends-cards .card-box--many-cards {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    gap: 40px 30px;
+    gap: 29px 40px;
   }
   .our-friends-cards .card-box--many-cards .card-item:nth-child(7) {
     display: none;
+  }
+  .our-friends-cards .card-slider {
+    margin-top: 28px 0 39px;
+    padding-left: 94px;
+    padding-right: 94px;
+  }
+  .our-friends-cards .card-slider .arrow--left {
+    margin-right: 12px;
+  }
+  .our-friends-cards .card-slider .arrow--right {
+    margin-left: 12px;
   }
   .our-friends-cards .card-item:last-child {
     display: none;
