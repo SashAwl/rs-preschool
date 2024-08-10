@@ -6,6 +6,7 @@
 .cozy-house {
     background-image: url(../../../assets/start-screen-gradient-background.jpg);
     background-size: cover;
+    position: relative;
 
     .main-top {
         display: flex;
@@ -231,3 +232,9 @@
         }
     }
 }
+
+// @media only screen and (max-width: 767px) {
+//     &--hover-background {
+//         background: rgba(41, 41, 41, 0.6);
+//     }
+// }

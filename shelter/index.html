@@ -10,24 +10,37 @@
 </head>
 
 <body>
-    <div class="cozy-house">
+    <div class="cozy-house cozy-house--hover-background">
         <div class="container">
             <header class="header">
                 <div class="logo">
                     <h1 class="heading-mini heading--logo"><a class="heading__link" href="#">Cozy House</a></h1>
                     <p class="logo__text">Shelter for pets in Boston</p>
                 </div>
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item current-page">
-                            <a class="menu__item__link" href="./index.html">About the shelter</a>
-                        </li>
-                        <li class="menu__item"><a class="menu__item__link" href="./pages/pets/index.html">Our pets</a>
-                        </li>
-                        <li class="menu__item"><a class="menu__item__link" href="#help">Help the shelter</a></li>
-                        <li class="menu__item"><a class="menu__item__link" href="#contacts">Contacts</a></li>
-                    </ul>
-                </nav>
+                <div class="navigation">
+                    <input class="navigation__checkbox" type="checkbox" name="burger" id="menu-toggle">
+                    <label class="navigation__burger" for="menu-toggle">
+                        <svg class="navigation__icon" width="30" height="22" viewBox="0 0 30 22" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <line y1="21" x2="30" y2="21" stroke="#F1CDB3" stroke-width="2" />
+                            <line y1="11" x2="30" y2="11" stroke="#F1CDB3" stroke-width="2" />
+                            <line y1="1" x2="30" y2="1" stroke="#F1CDB3" stroke-width="2" />
+                        </svg>
+                    </label>
+
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item current-page">
+                                <a class="menu__item__link" href="./index.html">About the shelter</a>
+                            </li>
+                            <li class="menu__item"><a class="menu__item__link" href="./pages/pets/index.html">Our
+                                    pets</a>
+                            </li>
+                            <li class="menu__item"><a class="menu__item__link" href="#help">Help the shelter</a></li>
+                            <li class="menu__item"><a class="menu__item__link" href="#contacts">Contacts</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
             <div class="main-top">
                 <div class="content">
@@ -83,7 +96,7 @@
                         <button class="button button--color-light">Learn more</button>
                     </div>
                 </div>
-                <svg class="card-slider__arrow" width="14" height="6" viewBox="0 0 14 6" fill="none"
+                <svg class="card-slider__arrow arrow--right" width="14" height="6" viewBox="0 0 14 6" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 4V2L11 2V0L14 3L11 6V4L0 4Z" fill="#292929" />
                 </svg>
