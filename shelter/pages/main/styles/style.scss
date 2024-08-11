@@ -6,6 +6,7 @@
 .cozy-house {
     background-image: url(../../../assets/start-screen-gradient-background.jpg);
     background-size: cover;
+    position: relative;
 
     .main-top {
         display: flex;
@@ -105,13 +106,18 @@
 }
 
 .donation {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
     background-color: $color-light-l;
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
 
     &__content {
         width: 380px;
+        display: flex;
+        flex-direction: column;
     }
 
     &__image {
@@ -214,20 +220,108 @@
     }
 
     .donation {
-        flex-direction: column;
-        align-items: center;
-        gap: 60px;
-        padding-left: 100px;
-        padding-right: 100px;
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
 
         &__content {
             order: 1;
         }
 
         &__image {
-            width: 505px;
             order: 2;
             margin-top: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    &--hover-background {
+        background: rgba(41, 41, 41, 0.6);
+    }
+
+    .cozy-house {
+        .main-top {
+            width: 100%;
+
+            .content {
+                width: 100%;
+                align-items: center;
+            }
+
+            &__heading {
+                width: 200px;
+                font-size: 25px;
+                letter-spacing: 0.06em;
+                text-align: center;
+            }
+
+            &__text {
+                text-align: center;
+            }
+
+            &__image {
+                height: 271px;
+            }
+        }
+    }
+
+    .about {
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 42px;
+
+        &__content {
+            width: 100%;
+        }
+
+        &__text {
+            text-align: justify;
+        }
+    }
+
+    .your-help {
+        .icon-box {
+            margin-top: 42px;
+            gap: 30px;
+            padding: 0;
+            align-items: flex-start;
+        }
+    }
+
+    .donation {
+        &__wrapper {
+            padding-left: 10px;
+            padding-right: 10px;
+            gap: 42px;
+        }
+
+        &__content {
+            width: 100%;
+            text-align: center;
+            align-items: center;
+        }
+
+        &__text {
+            line-height: 160%;
+            letter-spacing: 0;
+        }
+
+        &__phone {
+            font-size: 15px;
+        }
+
+        &__subscription {
+            font-size: 12px;
+            text-align: justify;
+        }
+
+        &__image {
+            height: 135px;
         }
     }
 }

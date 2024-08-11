@@ -11,18 +11,33 @@ body {
 
 .container {
     max-width: 1280px;
-    padding: 0 40px;
+    padding-left: 40px;
+    padding-right: 40px;
     box-sizing: border-box;
     margin: 0 auto;
+    overflow: hidden;
 
     @media only screen and (max-width: 1279px) {
-        padding: 0 30px;
+        min-width: 768px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media only screen and (max-width: 767px) {
+        min-width: 320px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
 .padding-each-block {
     padding-top: 81px;
     padding-bottom: 99px;
+
+    @media only screen and (max-width: 767px) {
+        padding-top: 42px;
+        padding-bottom: 42px;
+    }
 }
 
 @media only screen and (max-width:1279px) {
@@ -80,12 +95,45 @@ body {
         width: 300px;
     }
 
-    &--width-footer {
+    &--style-footer {
         width: 280px;
+        text-align: start;
     }
 
     &--align {
         text-align: center;
+    }
+
+    &--align-about {
+        text-align: left;
+    }
+
+    @media only screen and (max-width: 767px) {
+        &-mini {
+            font-size: 25px;
+        }
+
+        &--width {
+            width: 290px;
+        }
+
+        &--width-help {
+            width: 270px;
+        }
+
+        &--width-donation {
+            width: 220px;
+        }
+
+        &--align-about {
+            text-align: center;
+        }
+
+        &--style-footer {
+            width: 231px;
+            text-align: center;
+        }
+
     }
 }
 
@@ -149,47 +197,142 @@ body {
         }
     }
 
-    .menu {
-        &__list {
-            display: flex;
-            margin-left: 0;
-            gap: 36px;
-            list-style-type: none;
-            padding-bottom: 8px;
+    .navigation {
+
+        &__checkbox,
+        &__burger {
+            display: none;
         }
 
-        &__item {
-            font-family: $second-family;
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 155%;
-            transition: transform 1s easy;
-
-            &:hover {
-                scale: 1.02;
+        .menu {
+            &__list {
+                display: flex;
+                margin-left: 0;
+                gap: 36px;
+                list-style-type: none;
+                padding-bottom: 8px;
+                padding-left: 0;
             }
 
-            &:active {
-                border-bottom: 2px solid $color-primary;
+            &__item {
+                font-family: $second-family;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 155%;
+                transition: transform 1s easy;
+                color: $color-dark-s;
+
+                &:hover {
+                    scale: 1.02;
+                }
+
+                &:active a {
+                    border-bottom: 2px solid $color-primary;
+                }
+
+                &__link {
+                    text-decoration: none;
+                    color: $color-light-s;
+                }
+
+                .link--color-dark {
+                    color: $color-dark-l;
+                }
             }
 
-            &__link {
-                text-decoration: none;
+            .current-page {
+                pointer-events: none;
+                cursor: default;
                 color: $color-light-s;
-            }
 
-            .link--color-dark {
-                color: $color-dark-l;
+                &--color-dark a {
+                    color: $color-dark-3xl;
+                }
+
+                a {
+                    border-bottom: 2px solid $color-primary;
+                }
             }
         }
+    }
 
-        .current-page {
-            pointer-events: none;
-            cursor: default;
-            border-bottom: 2px solid $color-primary;
+    @media only screen and (max-width: 767px) {
+        .navigation {
+            transition: all 1s easy;
+
+            &__burger {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            &__checkbox {
+                visibility: hidden;
+                position: absolute;
+                left: -9999px;
+            }
+
+            &__icon {
+                display: inline-block;
+                width: 30px;
+                align-self: flex-end;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                z-index: 1000;
+
+                &--black line {
+                    stroke: black;
+                }
+            }
+
+            .menu {
+                visibility: hidden;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateX(100%);
+                background: $color-dark-3xl;
+                width: 320px;
+                height: 100%;
+                flex-direction: column;
+
+                &__list {
+                    flex-direction: column;
+                }
+
+                &__item {
+                    text-align: center;
+                    font-size: 32px;
+                    line-height: 160%;
+
+                    &__link {
+                        color: $color-dark-s;
+                    }
+                }
+
+                .current-page a {
+                    color: $color-light-s;
+                }
+            }
+
+            #menu-toggle:checked~.menu {
+                visibility: visible;
+                transform: translateX(0);
+                padding-top: 158px;
+                box-sizing: border-box;
+            }
+
+            #menu-toggle:checked~.navigation__burger>.navigation__icon {
+                transform: rotate(90deg) translateX(23px);
+            }
+
+            #menu-toggle:checked~.navigation__burger>.navigation__icon--black line {
+                stroke: $color-primary;
+            }
         }
     }
 }
+
 
 .footer {
     height: 350px;
@@ -204,6 +347,11 @@ body {
         justify-content: flex-start;
         padding-top: 30px;
         gap: 137px;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
     }
 
     &__list-contacts {
@@ -308,6 +456,31 @@ body {
 
         &__img {
             margin-left: 0;
+        }
+    }
+
+    @media only screen and (max-width:767px) {
+        .footer {
+
+            &__box {
+                gap: 40px;
+            }
+
+            &__section {
+                align-items: center;
+            }
+
+            &__list-contacts {
+                margin-top: 42px;
+            }
+
+            &__list-address {
+                margin-top: 42px;
+            }
+
+            &__list-item {
+                width: 100%;
+            }
         }
     }
 }
