@@ -41,7 +41,7 @@ body {
 @media only screen and (max-width: 767px) {
   .padding-each-block {
     padding-top: 42px;
-    padding-bottom: 42px;
+    padding-bottom: 37px;
   }
 }
 
@@ -304,7 +304,7 @@ body {
     stroke: black;
   }
   .header .navigation .menu {
-    visibility: hidden;
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -337,7 +337,7 @@ body {
     color: #fafafa;
   }
   .header .navigation #menu-toggle:checked ~ .menu {
-    visibility: visible;
+    display: block;
     -webkit-transform: translateX(0);
             transform: translateX(0);
     padding-top: 233px;
@@ -493,7 +493,7 @@ body {
 
 @media only screen and (max-width: 767px) {
   .footer .footer__box {
-    gap: 40px;
+    gap: 16px;
   }
   .footer .footer__section {
     -webkit-box-align: center;
@@ -508,6 +508,12 @@ body {
   }
   .footer .footer__list-item {
     width: 100%;
+  }
+  .footer .footer__list-item--address-big-indent {
+    margin-bottom: 42px;
+  }
+  .footer .footer__img {
+    width: 88%;
   }
 }
 
