@@ -5,6 +5,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 20px;
 }
 
 .pagination__item {
@@ -39,7 +40,9 @@
   background-color: #f1cdb3;
 }
 
-.pagination .pagination__item ~ .pagination__item {
-  margin-left: 20px;
+@media only screen and (max-width: 767px) {
+  .pagination {
+    gap: 10px;
+  }
 }
 /*# sourceMappingURL=pagination-styles.css.map */
