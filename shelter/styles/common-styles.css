@@ -304,7 +304,7 @@ body {
     stroke: black;
   }
   .header .navigation .menu {
-    visibility: hidden;
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
@@ -337,7 +337,7 @@ body {
     color: #fafafa;
   }
   .header .navigation #menu-toggle:checked ~ .menu {
-    visibility: visible;
+    display: block;
     -webkit-transform: translateX(0);
             transform: translateX(0);
     padding-top: 233px;
