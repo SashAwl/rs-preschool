@@ -119,6 +119,9 @@ body {
   .heading-mini {
     font-size: 25px;
   }
+  .heading--logo {
+    font-size: 32px;
+  }
   .heading--width {
     width: 290px;
   }
@@ -261,10 +264,15 @@ body {
 }
 
 .header .navigation .menu .current-page a {
+  padding-bottom: 7px;
   border-bottom: 2px solid #f1cdb3;
 }
 
 @media only screen and (max-width: 767px) {
+  .header {
+    padding: 24px 0 17px;
+    padding-left: 10px;
+  }
   .header .navigation {
     -webkit-transition: all 1s easy;
     transition: all 1s easy;
@@ -289,7 +297,7 @@ body {
         align-self: flex-end;
     position: absolute;
     right: 20px;
-    top: 20px;
+    top: 49px;
     z-index: 1000;
   }
   .header .navigation__icon--black line {
@@ -304,7 +312,7 @@ body {
             transform: translateX(100%);
     background: #292929;
     width: 320px;
-    height: 100%;
+    padding-bottom: 218px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -315,6 +323,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 42px;
   }
   .header .navigation .menu__item {
     text-align: center;
@@ -331,13 +340,13 @@ body {
     visibility: visible;
     -webkit-transform: translateX(0);
             transform: translateX(0);
-    padding-top: 158px;
+    padding-top: 233px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
   .header .navigation #menu-toggle:checked ~ .navigation__burger > .navigation__icon {
-    -webkit-transform: rotate(90deg) translateX(23px);
-            transform: rotate(90deg) translateX(23px);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
   }
   .header .navigation #menu-toggle:checked ~ .navigation__burger > .navigation__icon--black line {
     stroke: #f1cdb3;
@@ -473,7 +482,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 52px 36px;
+    gap: 42px 36px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -653,6 +662,11 @@ body {
         -ms-flex-order: 1;
             order: 1;
   }
+  .our-friends-cards .card-box--many-cards {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 30px;
+  }
   .our-friends-cards .card-slider {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -674,7 +688,14 @@ body {
             order: 3;
     margin-left: 30px;
   }
-  .our-friends-cards .card-item:not(:first-child) {
+  .our-friends-cards .card-slider--many-cards {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .our-friends-cards .card-item--few-cards:not(:first-child) {
+    display: none;
+  }
+  .our-friends-cards .card-item--many-cards:nth-child(n+4) {
     display: none;
   }
 }
@@ -861,7 +882,8 @@ body {
 }
 
 .donation__phone {
-  margin-top: 18px;
+  margin-top: 6px;
+  margin-bottom: 6px;
   background-color: #f1cdb3;
   padding: 10px 15px;
   border-radius: 10px;
@@ -987,6 +1009,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 15px;
+    margin-bottom: 106px;
   }
   .cozy-house .main-top__heading {
     width: 200px;
@@ -996,28 +1020,46 @@ body {
   }
   .cozy-house .main-top__text {
     text-align: center;
+    margin: 24px 0 42px;
   }
   .cozy-house .main-top__image {
     height: 271px;
   }
   .about {
-    padding-left: 10px;
-    padding-right: 10px;
-    gap: 42px;
+    padding-left: 25px;
+    padding-right: 25px;
+    gap: 26px;
   }
   .about__content {
     width: 100%;
   }
   .about__text {
+    margin-top: 23px;
     text-align: justify;
   }
+  .about__img {
+    width: 96%;
+  }
   .your-help .icon-box {
-    margin-top: 42px;
-    gap: 30px;
-    padding: 0;
+    margin-top: 44px;
+    gap: 32px 47px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .your-help .item__heading {
+    font-size: 15px;
+    margin-top: 18px;
+  }
+  .your-help .item__icon {
+    width: 50px;
+    height: 50px;
+  }
+  .your-help .item__icon img {
+    width: 49px;
+    height: 49px;
   }
   .donation__wrapper {
     padding-left: 10px;
@@ -1037,10 +1079,13 @@ body {
   }
   .donation__phone {
     font-size: 15px;
+    margin-top: 6px;
+    margin-bottom: 8px;
   }
   .donation__subscription {
     font-size: 12px;
     text-align: justify;
+    padding: 0 10px;
   }
   .donation__image {
     height: 135px;
