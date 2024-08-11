@@ -294,7 +294,7 @@ body {
             }
 
             .menu {
-                visibility: hidden;
+                display: none;
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -325,7 +325,7 @@ body {
             }
 
             #menu-toggle:checked~.menu {
-                visibility: visible;
+                display: block;
                 transform: translateX(0);
                 padding-top: 233px;
                 box-sizing: border-box;
