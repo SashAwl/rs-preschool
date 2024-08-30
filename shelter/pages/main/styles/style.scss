@@ -277,6 +277,7 @@
     .about {
         padding-left: 25px;
         padding-right: 25px;
+        padding-bottom: 44px;
         gap: 26px;
 
         &__content {
@@ -319,6 +320,8 @@
     }
 
     .donation {
+        padding-bottom: 39px;
+
         &__wrapper {
             padding-left: 10px;
             padding-right: 10px;
@@ -338,7 +341,7 @@
 
         &__phone {
             font-size: 15px;
-            margin-top: 6px;
+            margin-top: 10px;
             margin-bottom: 8px;
         }
 
