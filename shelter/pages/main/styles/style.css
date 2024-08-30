@@ -270,7 +270,7 @@ body {
 
 @media only screen and (max-width: 767px) {
   .header {
-    padding: 24px 0 17px;
+    padding: 21px 0 14px;
     padding-left: 10px;
   }
   .header .navigation {
@@ -492,27 +492,27 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-  .footer .footer__box {
+  .footer__box {
     gap: 16px;
   }
-  .footer .footer__section {
+  .footer__section {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .footer .footer__list-contacts {
-    margin-top: 42px;
+  .footer__list-contacts {
+    margin-top: 47px;
   }
-  .footer .footer__list-address {
-    margin-top: 42px;
+  .footer__list-address {
+    margin-top: 39px;
   }
-  .footer .footer__list-item {
+  .footer__list-item {
     width: 100%;
   }
-  .footer .footer__list-item--address-big-indent {
+  .footer .list-item--address-big-indent {
     margin-bottom: 42px;
   }
-  .footer .footer__img {
+  .footer__img {
     width: 88%;
   }
 }
@@ -661,6 +661,9 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+  .our-friends-cards {
+    padding-bottom: 41px;
+  }
   .our-friends-cards .card-box {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1034,6 +1037,7 @@ body {
   .about {
     padding-left: 25px;
     padding-right: 25px;
+    padding-bottom: 44px;
     gap: 26px;
   }
   .about__content {
@@ -1067,6 +1071,9 @@ body {
     width: 49px;
     height: 49px;
   }
+  .donation {
+    padding-bottom: 39px;
+  }
   .donation__wrapper {
     padding-left: 10px;
     padding-right: 10px;
@@ -1085,7 +1092,7 @@ body {
   }
   .donation__phone {
     font-size: 15px;
-    margin-top: 6px;
+    margin-top: 10px;
     margin-bottom: 8px;
   }
   .donation__subscription {

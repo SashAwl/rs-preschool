@@ -127,6 +127,8 @@
 
 @media only screen and (max-width: 767px) {
     .our-friends-cards {
+        padding-bottom: 39px;
+
         .card-box {
             grid-template-columns: 1fr;
             order: 1;
