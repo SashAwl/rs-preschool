@@ -208,10 +208,30 @@ body {
     }
 
     .navigation {
-
-        &__checkbox,
-        &__burger {
+        &__icon {
+            width: 30px;
+            height: 22px;
             display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .burger-line {
+            width: 100%;
+            height: 2px;
+            background-color: $color-primary;
+
+            &--black {
+                background-color: black;
+            }
+        }
+
+
+        &__checkbox {
+            visibility: hidden;
+            position: absolute;
+            left: -9999px;
         }
 
         .menu {
@@ -268,47 +288,51 @@ body {
     }
 
     @media only screen and (max-width: 767px) {
-        padding: 21px 0 14px;
+        padding: 19px 10px 17px;
         padding-left: 10px;
 
         .navigation {
-            transition: all 1s easy;
+
+            .menu,
+            &__icon,
+            &__icon--black {
+                transition: all 1s ease;
+            }
 
             &__burger {
                 display: flex;
                 justify-content: flex-end;
             }
 
-            &__checkbox {
-                visibility: hidden;
-                position: absolute;
-                left: -9999px;
+            &__icon {
+                display: flex;
+                z-index: 1000;
             }
 
-            &__icon {
-                display: inline-block;
-                width: 30px;
-                align-self: flex-end;
-                position: absolute;
-                right: 20px;
-                top: 49px;
-                z-index: 1000;
+            .back-menu {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100vw;
+                height: 100vh;
 
-                &--black line {
-                    stroke: black;
+                &--color {
+                    background-color: rgba(41, 41, 41, 0.6);
                 }
             }
 
             .menu {
-                display: none;
-                position: absolute;
+                width: 320px;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: fixed;
                 top: 0;
                 right: 0;
+                z-index: 100;
                 transform: translateX(100%);
                 background: $color-dark-3xl;
-                width: 320px;
-                padding-bottom: 218px;
-                flex-direction: column;
 
                 &__list {
                     flex-direction: column;
@@ -331,9 +355,7 @@ body {
             }
 
             #menu-toggle:checked~.menu {
-                display: block;
                 transform: translateX(0);
-                padding-top: 233px;
                 box-sizing: border-box;
             }
 
@@ -341,8 +363,8 @@ body {
                 transform: rotate(90deg);
             }
 
-            #menu-toggle:checked~.navigation__burger>.navigation__icon--black line {
-                stroke: $color-primary;
+            #menu-toggle:checked~.navigation__burger .burger-line--black {
+                background-color: $color-primary;
             }
         }
     }
