@@ -65,29 +65,30 @@ window.addEventListener("resize", () => {
     }
 })
 
-const sliderArrow = document.querySelectorAll(".card-slider__arrow");
-[arrowLeft, arrowRight] = sliderArrow;
+if (isMainPage) {
+    const sliderArrow = document.querySelectorAll(".card-slider__arrow");
+    [arrowLeft, arrowRight] = sliderArrow;
 
-arrowLeft.addEventListener("click", () => {
-    if (endCard - cardCount > 0) {
-        startCard -= cardCount;
-        endCard -= cardCount;
-        renderCards(cardDataList, startCard, endCard, localCardImg);
-    } else {
-        startCard = cardDataList.length - cardCount;
-        endCard = cardDataList.length;
-    }
-    console.log(startCard, endCard)
-});
+    arrowLeft.addEventListener("click", () => {
+        if (endCard - cardCount > 0) {
+            startCard -= cardCount;
+            endCard -= cardCount;
+            renderCards(cardDataList, startCard, endCard, localCardImg);
+        } else {
+            startCard = cardDataList.length - cardCount;
+            endCard = cardDataList.length;
+        }
+        console.log(startCard, endCard)
+    });
 
-arrowRight.addEventListener("click", () => {
-    if (startCard + cardCount < cardDataList.length) {
-        startCard += cardCount;
-        endCard += cardCount;
-        renderCards(cardDataList, startCard, endCard, localCardImg);
-    } else {
-        startCard = 0;
-        endCard = startCard + cardCount;
-    }
-})
-// console.log(arrowLeft, arrowRight)
+    arrowRight.addEventListener("click", () => {
+        if (startCard + cardCount < cardDataList.length) {
+            startCard += cardCount;
+            endCard += cardCount;
+            renderCards(cardDataList, startCard, endCard, localCardImg);
+        } else {
+            startCard = 0;
+            endCard = startCard + cardCount;
+        }
+    })
+}
