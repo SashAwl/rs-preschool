@@ -327,10 +327,10 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
   }
   .header .navigation .back-menu--color {
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(41, 41, 41, 0.6);
   }
   .header .navigation .menu {

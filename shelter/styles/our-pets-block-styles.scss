@@ -14,12 +14,26 @@
         justify-content: space-between;
         align-items: center;
 
+        &__wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 435px;
+            overflow: hidden;
+        }
+
         &__arrow {
             padding: 21px 18px;
             border-radius: 100px;
             border: 2px solid $color-primary;
             cursor: pointer;
             transition: all 0.4s ease;
+
+            &--blocked {
+                cursor: default;
+                pointer-events: none;
+                opacity: 30%;
+            }
 
             &:hover {
                 background-color: $color-primary-light;
@@ -45,7 +59,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 90px;
-        width: 100%;
 
         &--many-cards {
             padding: 0;
@@ -58,6 +71,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 270px;
         border-radius: 9px;
         padding-bottom: 30px;
         box-sizing: border-box;
@@ -95,10 +109,6 @@
         .card-box--many-cards {
             grid-template-columns: repeat(2, 1fr);
             gap: 29px 40px;
-
-            .card-item:nth-child(7) {
-                display: none;
-            }
         }
 
         .card-slider {
@@ -114,12 +124,6 @@
 
             .arrow--right {
                 margin-left: 12px;
-            }
-        }
-
-        .card-item {
-            &:last-child {
-                display: none;
             }
         }
     }
@@ -158,16 +162,6 @@
             &--many-cards {
                 padding-left: 10px;
                 padding-right: 10px;
-            }
-        }
-
-        .card-item {
-            &--few-cards:not(:first-child) {
-                display: none;
-            }
-
-            &--many-cards:nth-child(n+4) {
-                display: none;
             }
         }
     }
