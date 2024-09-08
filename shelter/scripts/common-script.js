@@ -1,3 +1,6 @@
+const isMainPage = !Boolean(document.querySelector(".card-box--many-cards"));
+const localCardImg = isMainPage ? "./" : "../../";
+
 const menuToogle = document.querySelector("#menu-toggle");
 const backMenu = document.querySelector(".back-menu");
 

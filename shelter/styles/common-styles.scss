@@ -9,6 +9,10 @@ body {
     padding: 0;
 }
 
+.body-block {
+    position: fixed;
+}
+
 .container {
     max-width: 1280px;
     padding-left: 40px;
@@ -112,6 +116,7 @@ body {
 
     &--align-about {
         text-align: left;
+        margin: 0 auto;
     }
 
     @media only screen and (max-width: 767px) {
