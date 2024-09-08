@@ -90,8 +90,7 @@ cards.addEventListener("click", (e) => {
         ourFriendsCards.prepend(createPopUpCard(petTargetData, localCardImg));
 
         shift = window.scrollY;
-        document.body.classList.add("body-block");
-        document.body.style = `position:fixed;top:-${shift}px`;
+        document.body.style.overflow = "hidden";
     }
 })
 
@@ -100,7 +99,6 @@ document.addEventListener("click", (e) => {
 
     if (popUp && e.target.matches(".pop-up__close")) { //!e.target.closest(".pop-up")
         popUp.remove();
-        document.body.classList.remove("body-block");
-        document.body.style = `position:relative;top: -${shift}px`;
+        document.body.style.overflow = "";
     }
 })
