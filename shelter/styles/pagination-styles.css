@@ -34,6 +34,8 @@
 .pagination .item--disabled {
   cursor: default;
   pointer-events: none;
+  opacity: 50%;
+  border-color: #cdcdcd;
 }
 
 .pagination .current-page-number {
