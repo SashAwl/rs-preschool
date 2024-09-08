@@ -20,12 +20,24 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.our-friends-cards .card-slider__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 435px;
+  overflow: hidden;
 }
 
 .our-friends-cards .card-slider__arrow {
@@ -35,6 +47,12 @@
   cursor: pointer;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+
+.our-friends-cards .card-slider__arrow--blocked {
+  cursor: default;
+  pointer-events: none;
+  opacity: 30%;
 }
 
 .our-friends-cards .card-slider__arrow:hover {
@@ -61,7 +79,6 @@
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   gap: 90px;
-  width: 100%;
 }
 
 .our-friends-cards .card-box--many-cards {
@@ -82,6 +99,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 270px;
   border-radius: 9px;
   padding-bottom: 30px;
   -webkit-box-sizing: border-box;
@@ -89,6 +107,7 @@
   background-color: #fafafa;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 .our-friends-cards .card-item:hover {
@@ -111,6 +130,109 @@
   color: #545454;
 }
 
+.pop-up {
+  width: 100vw;
+}
+
+.pop-up__back {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(41, 41, 41, 0.6);
+}
+
+.pop-up__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #fafafa;
+  z-index: 2000;
+  border-radius: 10px;
+}
+
+.pop-up__close {
+  position: absolute;
+  right: -40px;
+  top: -51px;
+  border: 1px solid #f1cdb3;
+  border-radius: 30px;
+  padding: 18px;
+  cursor: pointer;
+}
+
+.pop-up__close:hover {
+  background-color: #fddcc4;
+  border-color: #fddcc4;
+}
+
+.pop-up__image {
+  width: 500px;
+  border-radius: 10px;
+}
+
+.pop-up__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 351px;
+  padding: 50px 20px 50px 30px;
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000;
+}
+
+.pop-up__describe {
+  font-size: 20px;
+  line-height: 115%;
+  margin-top: 10px;
+  margin-bottom: 26px;
+}
+
+.pop-up__details {
+  margin-top: 28px;
+  margin-left: 14px;
+  padding-left: 0;
+  list-style-type: none;
+  font-weight: 700;
+}
+
+.pop-up__details li ~ li {
+  margin-top: 12px;
+}
+
+.pop-up .detail-list {
+  margin-top: 9px;
+  padding-left: 55px;
+  list-style-type: disclosure-closed;
+}
+
+.pop-up .detail-list li ~ li {
+  margin-top: 10px;
+}
+
 @media only screen and (max-width: 1279px) {
   .our-friends-cards .card-box {
     -ms-grid-columns: (1fr)[2];
@@ -121,9 +243,6 @@
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     gap: 29px 40px;
-  }
-  .our-friends-cards .card-box--many-cards .card-item:nth-child(7) {
-    display: none;
   }
   .our-friends-cards .card-slider--many-cards {
     margin: 28px 0 39px;
@@ -136,8 +255,11 @@
   .our-friends-cards .card-slider .arrow--right {
     margin-left: 12px;
   }
-  .our-friends-cards .card-item:last-child {
-    display: none;
+  .pop-up__content {
+    width: 260px;
+  }
+  .pop-up__image {
+    width: 350px;
   }
 }
 
@@ -182,11 +304,18 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-  .our-friends-cards .card-item--few-cards:not(:first-child) {
+  .pop-up__card {
+    width: 81%;
+  }
+  .pop-up__content {
+    width: 100%;
+    padding: 10px;
+  }
+  .pop-up__image {
     display: none;
   }
-  .our-friends-cards .card-item--many-cards:nth-child(n+4) {
-    display: none;
+  .pop-up__close {
+    right: -27px;
   }
 }
 /*# sourceMappingURL=our-pets-block-styles.css.map */
