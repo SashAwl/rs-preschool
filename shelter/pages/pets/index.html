@@ -23,13 +23,13 @@
             <div class="navigation">
                 <input class="navigation__checkbox" type="checkbox" name="burger" id="menu-toggle">
                 <label class="navigation__burger" for="menu-toggle">
-                    <svg class="navigation__icon navigation__icon--black" width="30" height="22" viewBox="0 0 30 22"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line y1="21" x2="30" y2="21" stroke="#F1CDB3" stroke-width="2" />
-                        <line y1="11" x2="30" y2="11" stroke="#F1CDB3" stroke-width="2" />
-                        <line y1="1" x2="30" y2="1" stroke="#F1CDB3" stroke-width="2" />
-                    </svg>
+                    <div class="navigation__icon">
+                        <div class="burger-line burger-line--black"></div>
+                        <div class="burger-line burger-line--black"></div>
+                        <div class="burger-line burger-line--black"></div>
+                    </div>
                 </label>
+                <div class="back-menu"></div>
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__item">
@@ -54,46 +54,6 @@
         <h2 class="heading-mini heading--width heading--align">Our friends who <br>are looking for a house</h2>
         <div class="card-slider card-slider--many-cards container">
             <div class="card-box card-box--many-cards">
-                <div class="card-item card-item--many-cards">
-                    <img class="card-item__image" src="../../assets/image/pets-katrine.jpg" alt="our-friend-photo">
-                    <h3 class="card-item__heading">Katrine</h3>
-                    <button class="button button--color-light">Learn more</button>
-                </div>
-                <div class="card-item card-item--many-cards">
-                    <img class="card-item__image" src="../../assets/image/pets-jennifer.jpg" alt="our-friend-photo">
-                    <h3 class="card-item__heading">Jennifer</h3>
-                    <button class="button button--color-light">Learn more</button>
-                </div>
-                <div class="card-item card-item--many-cards">
-                    <img class="card-item__image" src="../../assets/image/pets-woody.jpg" alt="our-friend-photo">
-                    <h3 class="card-item__heading">Woody</h3>
-                    <button class="button button--color-light">Learn more</button>
-                </div>
-                <div class="card-item card-item--many-cards">
-                    <img class="card-item__image" src="../../assets/image/pets-sophia.jpg" alt="our-friend-photo">
-                    <h3 class="card-item__heading">Sophia</h3>
-                    <button class="button button--color-light">Learn more</button>
-                </div>
-                <div class="card-item card-item--many-cards">
-                    <img class="card-item__image" src="../../assets/image/pets-timmy.jpg" alt="our-friend-photo">
-                    <h3 class="card-item__heading">Timmy</h3>
-                    <button class="button button--color-light">Learn more</button>
-                </div>
-                <div class="card-item card-item--many-cards">
-                    <img class="card-item__image" src="../../assets/image/pets-charly.jpg" alt="our-friend-photo">
-                    <h3 class="card-item__heading">Charly</h3>
-                    <button class="button button--color-light">Learn more</button>
-                </div>
-                <div class="card-item card-item--many-cards">
-                    <img class="card-item__image" src="../../assets/image/pets-scarlet.jpg" alt="our-friend-photo">
-                    <h3 class="card-item__heading">Scarlet</h3>
-                    <button class="button button--color-light">Learn more</button>
-                </div>
-                <div class="card-item card-item--many-cards">
-                    <img class="card-item__image" src="../../assets/image/pets-freddie.jpg" alt="our-friend-photo">
-                    <h3 class="card-item__heading">Freddie</h3>
-                    <button class="button button--color-light">Learn more</button>
-                </div>
             </div>
         </div>
         <div class="pagination">
@@ -140,6 +100,11 @@
             <img class="footer__img" src="../../assets/image/footer-puppy.jpg" alt="dog-photo">
         </div>
     </footer>
+
+    <script src="../../scripts/petData.js"></script>
+    <script src="../../scripts/common-script.js"></script>
+    <script src="../../scripts/slider-script.js"></script>
+    <script src="../../scripts/pop-up-script.js"></script>
 </body>
 
 </html>
