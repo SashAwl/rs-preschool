@@ -81,24 +81,33 @@ function createPopUpCard(petData, localImg) {
 
 const cards = document.querySelector(".card-box");
 const ourFriendsCards = document.querySelector(".our-friends-cards");
-let shift = 0;
 
+
+
+function closePopUp(e) {
+    const popUp = document.querySelector(".pop-up");
+
+    if (popUp && e.target.matches(".pop-up__close")) {
+        popUp.remove();
+        document.body.style.overflow = "";
+    }
+    // console.log(e.target.closest(".pop-up__card"))
+
+    // if (popUp && !e.target.closest(".pop-up")) {
+    //     popUp.remove();
+    //     document.body.style.overflow = "";
+    // }
+}
+
+document.addEventListener("click", (e) => {
+    closePopUp(e);
+})
 cards.addEventListener("click", (e) => {
     if (e.target.closest(".card-item")) {
         const petTargetName = Array.from(e.target.closest(".card-item").children).filter(i => i.matches(".card-item__heading"))[0].innerText;
         const petTargetData = cardData.filter(petItem => petItem.name === petTargetName)[0];
         ourFriendsCards.prepend(createPopUpCard(petTargetData, localCardImg));
 
-        shift = window.scrollY;
         document.body.style.overflow = "hidden";
-    }
-})
-
-document.addEventListener("click", (e) => {
-    const popUp = document.querySelector(".pop-up");
-
-    if (popUp && e.target.matches(".pop-up__close")) { //!e.target.closest(".pop-up")
-        popUp.remove();
-        document.body.style.overflow = "";
     }
 })

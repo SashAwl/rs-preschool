@@ -1,7 +1,3 @@
-// fetch("../assets/cardsData.json")
-//     .then(res => res.json)
-//     .then(data => console.log(data))
-
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
