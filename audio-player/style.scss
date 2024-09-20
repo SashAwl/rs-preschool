@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player__back {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    // background-image: url(./assets/images/guns&roses.jpg);
+    background-size: cover;
+    filter: blur(10px);
+    opacity: 85%;
+}
+
+.player {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    background-color: #efebeb8f;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.55) 4px 54px 55px, rgba(0, 0, 0, 0.22) 5px -12px 30px, rgba(0, 0, 0, 0.22) 3px 17px 29px, rgba(0, 0, 0, 0.27) 5px 12px 13px, rgba(0, 0, 0, 0.49) 6px -3px 13px;
+
+    &__img {
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    &__controlls {
+        width: 100%;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .controlls {
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        height: fit-content;
+        padding: 4%;
+        border-radius: 22px;
+        background-color: #ebe6e66e;
+
+        &__item {
+            width: 30px;
+            padding: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover path {
+                fill: green;
+            }
+
+            &:hover {
+                transform: scale(1.30);
+            }
+        }
+
+        &-blocked {
+            display: none;
+        }
+    }
+
+    .prev-next {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .progress {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__line {
+            cursor: pointer;
+            background-color: grey;
+            margin-left: 15px;
+        }
+
+        &-block {
+            display: flex;
+        }
+    }
+
+    .name-track {
+        font-size: 20px;
+    }
+
+    .id_track {
+        display: none;
+    }
+}
