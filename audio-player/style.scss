@@ -68,7 +68,7 @@ body {
             transition: transform 0.3s ease-in-out;
 
             &:hover path {
-                fill: green;
+                fill: #1976d2;
             }
 
             &:hover {
@@ -103,10 +103,28 @@ body {
     }
 
     .name-track {
-        font-size: 20px;
+        font-size: 24px;
+        margin: 0;
     }
 
     .id_track {
         display: none;
+    }
+
+    .mute {
+        position: relative;
+
+        &-change {
+            transform: rotate(-90deg);
+            position: absolute;
+            right: -48px;
+            top: -77px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        &__range {
+            cursor: pointer;
+        }
     }
 }

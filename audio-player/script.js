@@ -90,6 +90,7 @@ prevButton.addEventListener("click", () => {
     } else {
         startTrack(audioList[audioList.length - 1])
     }
+    if (isPlaying) audioElement.play();
 })
 
 const nextButton = document.querySelector(".icon-next");
@@ -100,4 +101,31 @@ nextButton.addEventListener("click", () => {
     } else {
         startTrack(audioList[0])
     }
+    if (isPlaying) audioElement.play();
+})
+
+let isOnMute;
+const mute = document.querySelector(".mute__changing");
+const onMute = document.querySelector(".mute__on");
+const offMute = document.querySelector(".mute__off");
+const muteRange = document.querySelector(".mute__range");
+
+mute.addEventListener("click", () => {
+    isOnMute = !isOnMute;
+    if (isOnMute) {
+        muteRange.classList.add("controlls-blocked");
+    } else {
+        muteRange.classList.remove("controlls-blocked");
+    }
+    onMute.classList.toggle("controlls-blocked");
+    offMute.classList.toggle("controlls-blocked");
+
+    audioElement.volume = !isOnMute ? muteRange.value : 0;
+})
+
+muteRange.addEventListener("input", () => {
+    audioElement.volume = muteRange.value;
+    setTimeout(() => {
+        muteRange.classList.add("controlls-blocked");
+    }, 1000)
 })
