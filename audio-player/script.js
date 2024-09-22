@@ -41,11 +41,26 @@ function startTrack({ id, name, img }) {
 
 function getTrackNum() {
     const currentIdTrack = +document.querySelector(".id_track").textContent;
-    return +audioList
+    return + currentAudioList
         .map((item, index) => item.id === currentIdTrack ? "" + index : "")
         .filter(item => item)[0];
 }
 
+function hideMuteRangeBar(delay) {
+    setTimeout(() => {
+        muteRange.classList.add("controlls-blocked");
+    }, delay)
+}
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+let currentAudioList = [...audioList];
 const audioElement = document.querySelector("audio");
 const progressLine = document.querySelector(".progress__line");
 const currentTime = document.querySelector(".current-time");
@@ -56,7 +71,7 @@ const nameTrack = document.querySelector(".name-track");
 const idTrack = document.querySelector(".id_track");
 let longTrack;
 
-startTrack(audioList[0]);
+startTrack(currentAudioList[0]);
 
 audioElement.addEventListener("timeupdate", () => {
     progressLine.value = audioElement.currentTime;
@@ -86,9 +101,9 @@ const prevButton = document.querySelector(".icon-prev");
 prevButton.addEventListener("click", () => {
     const trackNum = getTrackNum();
     if (trackNum > 0) {
-        startTrack(audioList[trackNum - 1]);
+        startTrack(currentAudioList[trackNum - 1]);
     } else {
-        startTrack(audioList[audioList.length - 1])
+        startTrack(currentAudioList[currentAudioList.length - 1])
     }
     if (isPlaying) audioElement.play();
 })
@@ -96,10 +111,10 @@ prevButton.addEventListener("click", () => {
 const nextButton = document.querySelector(".icon-next");
 nextButton.addEventListener("click", () => {
     const trackNum = getTrackNum();
-    if (trackNum + 1 < audioList.length) {
-        startTrack(audioList[trackNum + 1]);
+    if (trackNum + 1 < currentAudioList.length) {
+        startTrack(currentAudioList[trackNum + 1]);
     } else {
-        startTrack(audioList[0])
+        startTrack(currentAudioList[0])
     }
     if (isPlaying) audioElement.play();
 })
@@ -111,12 +126,16 @@ const offMute = document.querySelector(".mute__off");
 const muteRange = document.querySelector(".mute__range");
 
 mute.addEventListener("click", () => {
-    isOnMute = !isOnMute;
-    if (isOnMute) {
+    if (!isOnMute) {
         muteRange.classList.add("controlls-blocked");
+        onMute.classList.remove("controlls--checked");
     } else {
         muteRange.classList.remove("controlls-blocked");
+        onMute.classList.add("controlls--checked");
+
+        hideMuteRangeBar(2500);
     }
+    isOnMute = !isOnMute;
     onMute.classList.toggle("controlls-blocked");
     offMute.classList.toggle("controlls-blocked");
 
@@ -125,7 +144,11 @@ mute.addEventListener("click", () => {
 
 muteRange.addEventListener("input", () => {
     audioElement.volume = muteRange.value;
-    setTimeout(() => {
-        muteRange.classList.add("controlls-blocked");
-    }, 1000)
+    hideMuteRangeBar(1500);
+})
+
+const shuffleTracks = document.querySelector(".shuffle-tracks");
+shuffleTracks.addEventListener("click", () => {
+    shuffle(currentAudioList);
+    startTrack(currentAudioList[0]);
 })
