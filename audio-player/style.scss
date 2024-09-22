@@ -7,24 +7,32 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    height: 100%;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .player__back {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     left: 0;
     top: 0;
-    // background-image: url(./assets/images/guns&roses.jpg);
     background-size: cover;
     filter: blur(10px);
     opacity: 85%;
+    z-index: -10;
 }
 
 .player {
-    width: 60%;
+    width: 55%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,6 +57,10 @@ body {
         justify-content: space-between;
         align-items: center;
         gap: 10px;
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+        }
     }
 
     .controlls {
@@ -88,6 +100,11 @@ body {
     .prev-next {
         display: flex;
         flex-direction: column;
+
+        @media screen and (max-width: 767px) {
+            flex-direction: row;
+            gap: 10px;
+        }
     }
 
     .progress {
@@ -96,6 +113,7 @@ body {
         justify-content: center;
 
         &__line {
+            width: 100%;
             cursor: pointer;
             background-color: grey;
             margin-left: 15px;
@@ -103,6 +121,8 @@ body {
 
         &-block {
             display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 
@@ -115,6 +135,30 @@ body {
         display: none;
     }
 
+    .name-track {
+        @media screen and (max-width: 767px) {
+            margin: 10px 0;
+        }
+
+        @media screen and (max-width: 350px) {
+            font-size: 21px;
+        }
+    }
+
+    .controlls__extra {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: space-between;
+        }
+    }
+
     .mute {
         position: relative;
 
@@ -125,10 +169,39 @@ body {
             top: -78px;
             background-color: white;
             border-radius: 10px;
+
+            @media screen and (max-width: 767px) {
+                transform: rotate(0deg);
+                right: -137px;
+                top: 10px;
+                background-color: #fffff000;
+                ;
+            }
         }
 
         &__range {
             cursor: pointer;
         }
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+
+    .gitHubLink {
+        width: 30px;
+
+        & path {
+            fill: white;
+        }
+    }
+
+    .rs-course {
+        width: 30px;
     }
 }

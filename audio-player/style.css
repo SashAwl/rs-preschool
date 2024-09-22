@@ -9,17 +9,34 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .player__back {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: fixed;
   left: 0;
   top: 0;
@@ -27,10 +44,11 @@ body {
   -webkit-filter: blur(10px);
           filter: blur(10px);
   opacity: 85%;
+  z-index: -10;
 }
 
 .player {
-  width: 60%;
+  width: 55%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,6 +91,15 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .player__controlls {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .player .controlls {
@@ -129,6 +156,16 @@ body {
           flex-direction: column;
 }
 
+@media screen and (max-width: 767px) {
+  .player .prev-next {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 10px;
+  }
+}
+
 .player .progress {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -143,6 +180,7 @@ body {
 }
 
 .player .progress__line {
+  width: 100%;
   cursor: pointer;
   background-color: grey;
   margin-left: 15px;
@@ -152,6 +190,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .player .name-track {
@@ -161,6 +205,48 @@ body {
 
 .player .id_track {
   display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .player .name-track {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .player .name-track {
+    font-size: 21px;
+  }
+}
+
+.player .controlls__extra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .player .controlls__extra {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .player .mute {
@@ -177,7 +263,43 @@ body {
   border-radius: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  .player .mute-change {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    right: -137px;
+    top: 10px;
+    background-color: #fffff000;
+  }
+}
+
 .player .mute__range {
   cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.footer .gitHubLink {
+  width: 30px;
+}
+
+.footer .gitHubLink path {
+  fill: white;
+}
+
+.footer .rs-course {
+  width: 30px;
 }
 /*# sourceMappingURL=style.css.map */

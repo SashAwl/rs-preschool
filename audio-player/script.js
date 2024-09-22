@@ -149,6 +149,7 @@ muteRange.addEventListener("input", () => {
 
 const shuffleTracks = document.querySelector(".shuffle-tracks");
 shuffleTracks.addEventListener("click", () => {
+    shuffleTracks.classList.add("controlls--checked");
     shuffle(currentAudioList);
     startTrack(currentAudioList[0]);
 })
