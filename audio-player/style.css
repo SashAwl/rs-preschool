@@ -253,6 +253,10 @@ main {
   position: relative;
 }
 
+.player .mute__changing:hover ~ .mute-change {
+  display: block;
+}
+
 .player .mute-change {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
