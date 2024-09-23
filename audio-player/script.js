@@ -46,6 +46,15 @@ function getTrackNum() {
         .filter(item => item)[0];
 }
 
+function checkoutNext(trackNum) {
+    if (trackNum + 1 < currentAudioList.length) {
+        startTrack(currentAudioList[trackNum + 1]);
+    } else {
+        startTrack(currentAudioList[0]);
+    }
+    if (isPlaying) audioElement.play();
+}
+
 function hideMuteRangeBar(delay) {
     setTimeout(() => {
         muteRange.classList.add("controlls-blocked");
@@ -106,17 +115,15 @@ prevButton.addEventListener("click", () => {
         startTrack(currentAudioList[currentAudioList.length - 1])
     }
     if (isPlaying) audioElement.play();
-})
+});
 
 const nextButton = document.querySelector(".icon-next");
 nextButton.addEventListener("click", () => {
-    const trackNum = getTrackNum();
-    if (trackNum + 1 < currentAudioList.length) {
-        startTrack(currentAudioList[trackNum + 1]);
-    } else {
-        startTrack(currentAudioList[0])
-    }
-    if (isPlaying) audioElement.play();
+    checkoutNext(getTrackNum());
+});
+
+audioElement.addEventListener("ended", () => {
+    checkoutNext(getTrackNum());
 })
 
 let isOnMute;
@@ -140,6 +147,11 @@ mute.addEventListener("click", () => {
     offMute.classList.toggle("controlls-blocked");
 
     audioElement.volume = !isOnMute ? muteRange.value : 0;
+})
+
+onMute.addEventListener("mouseenter", () => {
+    muteRange.classList.remove("controlls-blocked");
+    hideMuteRangeBar(2500);
 })
 
 muteRange.addEventListener("input", () => {

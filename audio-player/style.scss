@@ -162,6 +162,10 @@ main {
     .mute {
         position: relative;
 
+        &__changing:hover~.mute-change {
+            display: block;
+        }
+
         &-change {
             transform: rotate(-90deg);
             position: absolute;
