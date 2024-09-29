@@ -21,6 +21,7 @@ function createImageItem(imgData) {
     const imageItem = document.createElement("div");
     imageItem.style.backgroundImage = "url(" + imgData.cover_photo.urls.small + ")";
     imageItem.className = "image-item";
+
     return imageItem;
 }
 
@@ -92,12 +93,6 @@ closeIcon.addEventListener("click", () => {
     searchLine.value = "";
     toggleIconSearch();
 })
-
-// const imgItem = document.querySelector(".image-item");
-// imgItem.addEventListener("click", () => {
-//     const fullPhotoBox = document.createElement("img");
-//     fullPhotoBox.clas
-// })
 
 const loadMoreButton = document.querySelector(".load-more");
 loadMoreButton.addEventListener("click", () => {
