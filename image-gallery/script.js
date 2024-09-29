@@ -1,7 +1,7 @@
 const accessKey = "toRvZzu_BTm4oz1hzsIwspseUYlyzA3I9aebIJkDh6k";
 const apiUrl = `https://api.unsplash.com/search/collections?client_id=${accessKey}`;
 const dafaultQuery = "autumn";
-const defaultPage = 1;
+let numPage = 1;
 
 function createQueryURL(apiURL, query, page) {
     return apiURL + `&page=${page}&query=${query}`;
@@ -31,18 +31,32 @@ function createNotFound() {
     return notFound;
 }
 
+function createNoMoreImages() {
+    const noMore = document.createElement("p");
+    noMore.className = "not-found";
+    noMore.textContent = "You have viewed all images for the current keyword.";
+    return noMore;
+}
+
 function displayImgGallery(dataUrl, galleryBox) {
     getData(dataUrl).then(data => {
-        data.length
-            ? data.forEach(item => galleryBox.append(createImageItem(item)))
-            : galleryBox.append(createNotFound());
+        if (data.length) {
+            data.forEach(item => galleryBox.append(createImageItem(item)))
+            loadMoreButton.classList.remove("load-more--hide");
+        } else if (numPage > 1) {
+            galleryBox.append(createNoMoreImages());
+            loadMoreButton.classList.add("load-more--hide");
+        } else {
+            galleryBox.append(createNotFound());
+            loadMoreButton.classList.add("load-more--hide");
+        }
     })
 }
 
-function displaySearchingImgGallery() {
-    const queryItem = searchLine.value;
-    const queryURL = createQueryURL(apiUrl, queryItem, 1);
-    galleryImages.innerHTML = "";
+function displaySearchingImgGallery(isNewRequest, pageNum) {
+    const queryItem = searchLine.value || dafaultQuery;
+    const queryURL = createQueryURL(apiUrl, queryItem, pageNum);
+    if (isNewRequest) galleryImages.innerHTML = "";
     displayImgGallery(queryURL, galleryImages);
 }
 
@@ -51,7 +65,7 @@ function toggleIconSearch() {
     closeIcon.classList.toggle("icon-blocked");
 }
 
-const linUrl = createQueryURL(apiUrl, dafaultQuery, defaultPage);
+const linUrl = createQueryURL(apiUrl, dafaultQuery, numPage);
 const galleryImages = document.querySelector(".gallery__images");
 displayImgGallery(linUrl, galleryImages);
 
@@ -62,17 +76,31 @@ const isDoneRequest = false;
 
 searchLine.addEventListener("keyup", (e) => {
     if (e.code === "Enter") {
-        displaySearchingImgGallery();
+        numPage = 1;
+        displaySearchingImgGallery(true, numPage);
         toggleIconSearch();
     }
 });
 
 searchIcon.addEventListener("click", () => {
-    displaySearchingImgGallery();
+    numPage = 1;
+    displaySearchingImgGallery(true, numPage);
     toggleIconSearch();
 });
 
 closeIcon.addEventListener("click", () => {
     searchLine.value = "";
     toggleIconSearch();
+})
+
+// const imgItem = document.querySelector(".image-item");
+// imgItem.addEventListener("click", () => {
+//     const fullPhotoBox = document.createElement("img");
+//     fullPhotoBox.clas
+// })
+
+const loadMoreButton = document.querySelector(".load-more");
+loadMoreButton.addEventListener("click", () => {
+    numPage += 1;
+    displaySearchingImgGallery(false, numPage);
 })
