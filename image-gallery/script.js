@@ -1,7 +1,11 @@
-const apiUrl = "https://api.unsplash.com/";
 const accessKey = "toRvZzu_BTm4oz1hzsIwspseUYlyzA3I9aebIJkDh6k";
-let query = "spring";
-const linUrl = apiUrl + `search/collections?client_id=${accessKey}&page=1&query=${query}`;
+const apiUrl = `https://api.unsplash.com/search/collections?client_id=${accessKey}`;
+const dafaultQuery = "autumn";
+const defaultPage = 1;
+
+function createQueryURL(apiURL, query, page) {
+    return apiURL + `&page=${page}&query=${query}`;
+}
 
 async function getData(url) {
     return await fetch(url)
@@ -20,12 +24,55 @@ function createImageItem(imgData) {
     return imageItem;
 }
 
-function displayGalleryImg(galleryBox) {
-    getData(linUrl).then(data => {
-        console.log(data[0])
-        data.forEach(item => galleryBox.append(createImageItem(item)));
+function createNotFound() {
+    const notFound = document.createElement("p");
+    notFound.className = "not-found";
+    notFound.textContent = "No images found for your search";
+    return notFound;
+}
+
+function displayImgGallery(dataUrl, galleryBox) {
+    getData(dataUrl).then(data => {
+        data.length
+            ? data.forEach(item => galleryBox.append(createImageItem(item)))
+            : galleryBox.append(createNotFound());
     })
 }
 
+function displaySearchingImgGallery() {
+    const queryItem = searchLine.value;
+    const queryURL = createQueryURL(apiUrl, queryItem, 1);
+    galleryImages.innerHTML = "";
+    displayImgGallery(queryURL, galleryImages);
+}
+
+function toggleIconSearch() {
+    searchIcon.classList.toggle("icon-blocked");
+    closeIcon.classList.toggle("icon-blocked");
+}
+
+const linUrl = createQueryURL(apiUrl, dafaultQuery, defaultPage);
 const galleryImages = document.querySelector(".gallery__images");
-displayGalleryImg(galleryImages);
+displayImgGallery(linUrl, galleryImages);
+
+const searchIcon = document.querySelector(".icon-search");
+const closeIcon = document.querySelector(".icon-close");
+const searchLine = document.querySelector(".search__line");
+const isDoneRequest = false;
+
+searchLine.addEventListener("keyup", (e) => {
+    if (e.code === "Enter") {
+        displaySearchingImgGallery();
+        toggleIconSearch();
+    }
+});
+
+searchIcon.addEventListener("click", () => {
+    displaySearchingImgGallery();
+    toggleIconSearch();
+});
+
+closeIcon.addEventListener("click", () => {
+    searchLine.value = "";
+    toggleIconSearch();
+})
