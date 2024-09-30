@@ -61,11 +61,6 @@ function displaySearchingImgGallery(isNewRequest, pageNum) {
     displayImgGallery(queryURL, galleryImages);
 }
 
-function toggleIconSearch() {
-    searchIcon.classList.toggle("icon-blocked");
-    closeIcon.classList.toggle("icon-blocked");
-}
-
 const linUrl = createQueryURL(apiUrl, dafaultQuery, numPage);
 const galleryImages = document.querySelector(".gallery__images");
 displayImgGallery(linUrl, galleryImages);
@@ -79,19 +74,28 @@ searchLine.addEventListener("keyup", (e) => {
     if (e.code === "Enter") {
         numPage = 1;
         displaySearchingImgGallery(true, numPage);
-        toggleIconSearch();
     }
 });
+
+searchLine.addEventListener("input", () => {
+    if (!searchLine.value) {
+        searchIcon.classList.add("no-active");
+        closeIcon.classList.add("no-active");
+    } else {
+        searchIcon.classList.remove("no-active");
+        closeIcon.classList.remove("no-active");
+    }
+})
 
 searchIcon.addEventListener("click", () => {
     numPage = 1;
     displaySearchingImgGallery(true, numPage);
-    toggleIconSearch();
 });
 
 closeIcon.addEventListener("click", () => {
     searchLine.value = "";
-    toggleIconSearch();
+    searchIcon.classList.add("no-active");
+    closeIcon.classList.add("no-active");
 })
 
 const loadMoreButton = document.querySelector(".load-more");
