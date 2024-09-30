@@ -80,10 +80,10 @@ searchLine.addEventListener("keyup", (e) => {
 searchLine.addEventListener("input", () => {
     if (!searchLine.value) {
         searchIcon.classList.add("no-active");
-        closeIcon.classList.add("no-active");
+        closeIcon.classList.add("icon-blocked");
     } else {
         searchIcon.classList.remove("no-active");
-        closeIcon.classList.remove("no-active");
+        closeIcon.classList.remove("icon-blocked");
     }
 })
 
@@ -95,7 +95,7 @@ searchIcon.addEventListener("click", () => {
 closeIcon.addEventListener("click", () => {
     searchLine.value = "";
     searchIcon.classList.add("no-active");
-    closeIcon.classList.add("no-active");
+    closeIcon.classList.add("icon-blocked");
 })
 
 const loadMoreButton = document.querySelector(".load-more");
