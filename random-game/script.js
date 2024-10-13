@@ -74,12 +74,6 @@ const startWrapper = document.querySelector(".start-wrapper");
 startButton.addEventListener("click", () => startGame());
 startButtonAgain.addEventListener("click", () => startGame());
 
-levelIcon.addEventListener("click", () => {
-    const speed = document.querySelector(".animation-blocks");
-    speedAnimation -= 1;
-    console.log(speedAnimation)
-    speed.style.animationDuration = `${speedAnimation}s`  //`{'animation-duration': ${speedAnimation}s}`;
-})
 
 function jump() {
     jumping = 1;
