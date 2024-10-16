@@ -10,7 +10,7 @@ let speedAnimation = 5;
 let gameCount = 0;
 let jumping = 0;
 let score = 0;
-if (!localStorage.length) localStorage.setItem("games", '[]');
+if (!localStorage || !localStorage.length) localStorage.setItem("games", '[]');
 
 function setGameInterval(gameInterval) {
     const characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
@@ -73,7 +73,6 @@ const startWrapper = document.querySelector(".start-wrapper");
 
 startButton.addEventListener("click", () => startGame());
 startButtonAgain.addEventListener("click", () => startGame());
-
 
 function jump() {
     jumping = 1;
